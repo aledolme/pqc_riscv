@@ -1,0 +1,15 @@
+false_adder:
+  incdirs:
+      ../register_interface/include
+      ../register_interface/vendor/lowrisc_opentitan/include
+  files:
+    - gen_sv/keccak_reg_pkg.sv 
+    - gen_sv/keccak_reg_top.sv
+    - keccack_globals.vhd
+    - keccak_round_constants_gen.vhd
+    - keccak_round.vhd
+    - keccak_buffer.vhd
+    - keccak.vhd
+    - keccak_top.sv
+  vlog_opts:
+    - -L register_interface_lib

@@ -1,0 +1,59 @@
+{
+    name: "keccak",
+    clock_primary: "clk_i",
+    reset_primary: "rst_ni",
+    bus_device: "reg",
+    bus_host: "",
+
+    regwidth: "32",
+    registers: [
+        { multireg:
+          { name: "DIN",
+            desc: "Subword of input of Keccak module",
+            count: "50",
+            cname: "DIN",
+            swaccess: "wo",
+            fields: [
+                { bits: "31:0"
+                }
+            ],
+          }
+        },
+        { multireg:
+          { name: "DOUT",
+            desc: "Subword of results.",
+            count: "50",
+            cname: "dout",
+            swaccess: "ro",
+            hwaccess: "hwo",
+            hwext: "true",
+            fields: [
+                { bits: "31:0"
+                }
+            ],
+          }
+        },
+	{ name: "CTRL"
+	  desc: " Trigger the Keccak "
+	  swaccess: "rw",
+	  hwaccess: "hrw",
+	  hwext: "true",
+	  fields: [
+	      { bits: "0", name: "START",
+		desc: "Make the keccack starts"
+	      }
+	  ]	
+	},
+	{ name: "STATUS"
+	  desc: " Contains status information about the Keccak"
+	  swaccess: "ro",
+	  hwaccess: "hwo",
+	  hwext: "true",
+	  fields: [
+	      { bits: "0", name: "STATUS",
+		desc: "If set output of keccack is valid"
+	      }
+	  ]	
+	}
+    ],
+}

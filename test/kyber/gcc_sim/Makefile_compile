@@ -1,0 +1,13 @@
+# This Makefile can be used with GNU Make or BSD Make
+
+GCC ?= /usr/bin/gcc
+CFLAGS += -Wall
+RM = /bin/rm
+
+
+HEADERS = ../api.h ../cbd.h ../fips202.h ../indcpa.h ../kem.h ../ntt.h ../params.h ../poly.h ../polyvec.h ../randombytes.h ../reduce.h ../symmetric.h ../verify.h
+SOURCES = ../cbd.c fips202.c ../indcpa.c ../kem.c ../ntt.c ../poly.c ../polyvec.c ../randombytes.c ../reduce.c ../symmetric-shake.c ../verify.c
+
+main_Kyber: $(SOURCES) $(HEADERS) testvectors.c
+	$(GCC) $(CFLAGS) $(SOURCES) testvectors.c -o main_Kyber
+
