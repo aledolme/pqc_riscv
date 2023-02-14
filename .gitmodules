@@ -1,3 +1,6 @@
 [submodule "pulpissimo"]
 	path = pulpissimo
 	url = https://github.com/aledolme/pulpissimo.git
+[submodule "pulp-runtime"]
+	path = pulp-runtime
+	url = https://github.com/aledolme/pulp-runtime.git
