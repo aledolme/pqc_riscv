@@ -1,0 +1,3 @@
+[submodule "pulpissimo"]
+	path = pulpissimo
+	url = https://github.com/aledolme/pulpissimo.git
