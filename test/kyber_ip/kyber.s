@@ -1,6 +1,6 @@
-riscv32-unknown-elf-objdump  -d /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/test/kyber/build/testvector/testvector
+riscv32-unknown-elf-objdump  -d /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/test/kyber_ip/build/testkyber/testkyber
 
-/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/test/kyber/build/testvector/testvector:     file format elf32-littleriscv
+/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/test/kyber_ip/build/testkyber/testkyber:     file format elf32-littleriscv
 
 
 Disassembly of section .vectors:

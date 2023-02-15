@@ -12,12 +12,12 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# source /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv_project/pulpissimo/sim/tcl_files/config/run_and_exit.tcl
-# source /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv_project/pulpissimo/sim/tcl_files/run.tcl
+# source /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/sim/tcl_files/config/run_and_exit.tcl
+# source /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/sim/tcl_files/run.tcl
 # vsim -c -quiet vopt_tb -t ps "+nowarnTRAN" "+nowarnTSCALE" "+nowarnTFMPC" -suppress 8386 "+UVM_NO_RELNOTES" "+ENTRY_POINT=0x1c008080" -permit_unmatched_virtual_intf -voptargs="+acc -assertdebug -bitscalars -fsmdebug -linedebug" -gBAUDRATE=115200 -gLOAD_L2=JTAG 
-# Start time: 16:34:50 on Feb 06,2023
+# Start time: 10:38:28 on Feb 15,2023
 # ** Warning: (vsim-3770) Failed to find user specified function 'jtag_tick' in DPI precompiled library search list "/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so ".
-#    Time: 0 ps  Iteration: 0  Region: /SimJTAG_sv_unit File: /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv_project/pulpissimo/rtl/tb/SimJTAG.sv
+#    Time: 0 ps  Iteration: 0  Region: /SimJTAG_sv_unit File: /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/rtl/tb/SimJTAG.sv
 # ** Warning: (vsim-8683) Uninitialized out port /tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_clk_rst_gen/i_fll_soc/i_FLL_digital/TQ has no driver.
 # This port will contribute value (U) to the signal network.
 # ** Warning: (vsim-8683) Uninitialized out port /tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_clk_rst_gen/i_fll_soc/i_FLL_digital/JTQ has no driver.
@@ -32,8 +32,6 @@
 # This port will contribute value (U) to the signal network.
 # ** Warning: (vsim-3040) Command line generic/parameter "LOAD_L2" not found in design.
 #  
-do ../../../pulpissimo/sim/waves/keccak_wrap.tcl
-do ../../../pulpissimo/sim/waves/keccak_wrap_cu.sv
 run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
@@ -45,10 +43,10 @@ run -all
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
 # ** Warning: (vsim-7) Failed to open readmem file "/../rtl/vip/camera/img/frame0.img" in read mode.
-# No such file or directory. (errno = ENOENT)    : /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv_project/pulpissimo/rtl/vip/camera/cam_vip.sv(88)
+# No such file or directory. (errno = ENOENT)    : /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/rtl/vip/camera/cam_vip.sv(88)
 #    Time: 0 ps  Iteration: 0  Instance: /tb_pulp/genblk2/i_cam_vip
 # ** Warning: (vsim-7) Failed to open readmem file "/../rtl/vip/camera/img/frame1.img" in read mode.
-# No such file or directory. (errno = ENOENT)    : /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv_project/pulpissimo/rtl/vip/camera/cam_vip.sv(89)
+# No such file or directory. (errno = ENOENT)    : /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/rtl/vip/camera/cam_vip.sv(89)
 #    Time: 0 ps  Iteration: 0  Instance: /tb_pulp/genblk2/i_cam_vip
 # [cv32e40p_core]: PULP_XPULP =           1, PULP_CLUSTER =           0, FPU           1, PULP_ZFINX           0, NUM_MHPMCOUNTERS           1
 # [TB  ]       0ns - Asserting hard reset
@@ -130,8 +128,8 @@ run -all
 # [TB  ] 23254101ns - Waiting for end of computation
 # [STDOUT-CL31_PE0] Keypair done!
 # [TB  ] 36287401ns - Received status core: 0x00000000
-# ** Note: $stop    : /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv_project/pulpissimo/rtl/tb/tb_pulp.sv(776)
+# ** Note: $stop    : /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/rtl/tb/tb_pulp.sv(776)
 #    Time: 36287401 ns  Iteration: 0  Instance: /tb_pulp
-# Break in Module tb_pulp at /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv_project/pulpissimo/rtl/tb/tb_pulp.sv line 776
-# End time: 16:54:43 on Feb 06,2023, Elapsed time: 0:19:53
+# Break in Module tb_pulp at /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/rtl/tb/tb_pulp.sv line 776
+# End time: 11:06:12 on Feb 15,2023, Elapsed time: 0:27:44
 # Errors: 0, Warnings: 10

@@ -11,7 +11,7 @@ cd pulpissimo
 make checkout
 source setup/vsim.sh
 env | grep VSIM
-make clean build  
+make clean build > keccak_ip_v2_build.log
 
 cd ../test/keccak_ip_v2
 make clean all
