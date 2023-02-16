@@ -195,3 +195,41 @@ run -all
 # [PULP] 11072001ns - WRITE32 burst @1c003000 for        1024 bytes.
 # [PULP] 11902101ns - WRITE32 burst @1c003400 for        1024 bytes.
 # [PULP] 12732201ns - WRITE32 burst @1c003800 for        1024 bytes.
+# [PULP] 13562301ns - WRITE32 burst @1c003c00 for        1024 bytes.
+# [PULP] 13848401ns - WRITE32 burst @1c004000 for         344 bytes.
+# [PULP] 14678501ns - WRITE32 burst @1c008000 for        1024 bytes.
+# [PULP] 15092601ns - WRITE32 burst @1c008400 for         504 bytes.
+# [TB  ] 15094201ns - Resuming the CORE
+# [TB  ] 15138301ns - retrying debug reg access
+# [TB  ] 15167601ns - retrying debug reg access
+# [TB  ] 15196901ns - retrying debug reg access
+# [TB  ] 15226201ns - retrying debug reg access
+# [TB  ] 15255501ns - retrying debug reg access
+# [TB  ] 15284801ns - retrying debug reg access
+# [TB  ] 15314101ns - retrying debug reg access
+# [TB  ] 15343401ns - retrying debug reg access
+# [TB  ] 15372701ns - retrying debug reg access
+# [TB  ] 15402001ns - retrying debug reg access
+# [TB  ] 15431301ns - retrying debug reg access
+# [TB  ] 15460601ns - retrying debug reg access
+# [TB  ] 15489901ns - retrying debug reg access
+# [TB  ] 15519201ns - retrying debug reg access
+# [TB  ] 15548501ns - retrying debug reg access
+# [TB  ] 15577801ns - retrying debug reg access
+# [TB  ] 15607101ns - retrying debug reg access
+# [TB  ] 15636401ns - retrying debug reg access
+# [TB  ] 15665701ns - retrying debug reg access
+# [TB  ] 15695001ns - retrying debug reg access
+# [TB  ] 15724301ns - retrying debug reg access
+# [TB  ] 15753601ns - retrying debug reg access
+# [TB  ] 15782901ns - retrying debug reg access
+# [TB  ] 15812201ns - retrying debug reg access
+# [TB  ] 15841501ns - retrying debug reg access
+# [STDOUT-CL31_PE0] Hello Keccak
+# [TB  ] 16414901ns - Waiting for end of computation
+# [TB  ] 16509001ns - Received status core: 0x00000000
+# ** Note: $stop    : /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/rtl/tb/tb_pulp.sv(776)
+#    Time: 16509001 ns  Iteration: 0  Instance: /tb_pulp
+# Break in Module tb_pulp at /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/rtl/tb/tb_pulp.sv line 776
+# End time: 16:41:56 on Feb 16,2023, Elapsed time: 0:15:30
+# Errors: 0, Warnings: 10
