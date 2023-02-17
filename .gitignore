@@ -4,6 +4,7 @@
 
 #ignore all the build-folder, since contains very large files for complex algorithm
 test/keccak_ip/build/
+test/keccak_ip_v2/build/
 test/SHA3/build/
 test/keccak/build/
 test/kyber/build/
