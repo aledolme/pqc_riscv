@@ -122,3 +122,5 @@ run -all
 # ** Note: $stop    : /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/rtl/tb/tb_pulp.sv(776)
 #    Time: 16509001 ns  Iteration: 0  Instance: /tb_pulp
 # Break in Module tb_pulp at /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/rtl/tb/tb_pulp.sv line 776
+# End time: 13:45:15 on Feb 17,2023, Elapsed time: 1:02:00
+# Errors: 0, Warnings: 10

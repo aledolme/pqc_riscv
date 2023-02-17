@@ -11,12 +11,11 @@ cd pulpissimo
 make checkout
 source setup/vsim.sh
 env | grep VSIM
-make clean build  
+make clean build > keccak_build.log 
 
 cd ../test/keccak_ip
 make clean all
 make dis > keccak.s
-#cd ../sw/hello
 make -f Makefile run gui=1
 
 
