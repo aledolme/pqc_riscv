@@ -1,6 +1,6 @@
-riscv32-unknown-elf-objdump  -d /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/test/keccak_ip_v2/build/keccak/keccak
+riscv32-unknown-elf-objdump  -d /home/thesis/mattia.mirigaldi/Desktop/pqc_riscv/test/keccak_ip_v2/build/keccak/keccak
 
-/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/test/keccak_ip_v2/build/keccak/keccak:     file format elf32-littleriscv
+/home/thesis/mattia.mirigaldi/Desktop/pqc_riscv/test/keccak_ip_v2/build/keccak/keccak:     file format elf32-littleriscv
 
 
 Disassembly of section .vectors:
