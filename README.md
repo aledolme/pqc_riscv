@@ -7,10 +7,9 @@ If you are using this accelerator, please refers to:
 
 
 # Getting started
+**pulpissimo** is the microcontroller architecture of the more recent PULP chips, part of the ongoing "PULP platform" collaboration between ETH Zurich and the University of Bologna - started in 2013. Please refers to [pulpissimo GitHub Pages] (https://github.com/pulp-platform/pulpissimo) for further information. 
 
-pulpissimo is the microcontroller architecture of the more recent PULP chips, part of the ongoing "PULP platform" collaboration between ETH Zurich and the University of Bologna - started in 2013. Please refers to [pulpissimo GitHub Pages] (https://github.com/pulp-platform/pulpissimo) for further information. 
-
-pulp-runtime is a simple runtime for the Pulp architecture. Please refers to [pulp-runtime GitHub Pages] (https://github.com/pulp-platform/pulp-runtime.git) for further information. 
+**pulp-runtime** is a simple runtime for the Pulp architecture. Please refers to [pulp-runtime GitHub Pages] (https://github.com/pulp-platform/pulp-runtime.git) for further information. 
 
 ## Prerequisities
 
