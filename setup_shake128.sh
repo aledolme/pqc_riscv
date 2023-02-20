@@ -16,7 +16,6 @@ make clean build
 cd ../test/SHA3
 make clean all
 make dis > shake128.s
-#cd ../sw/hello
 make -f Makefile run
 
 

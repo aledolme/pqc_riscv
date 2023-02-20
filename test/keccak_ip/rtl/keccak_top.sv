@@ -64,21 +64,42 @@ module keccak_top
 		.reg2hw(reg_file_to_ip),
 		.hw2reg(ip_to_reg_file) 
 	);
-	
+
+        
+   // wiring signals between control unit and ip
+   wire logic [63:0] din_keccak, dout_keccak;
+   wire logic ready_keccak, dout_valid_keccak, start_keccak, last_block_keccak, din_valid_keccak;
+   
+        keccak_cu i_keccak_cu (
+		.clk_i(clk_i),
+		.rst_ni(rst_ni),
+		.start_i(reg_file_to_ip.ctrl.q & reg_file_to_ip.ctrl.qe),
+		.ready_keccak_i(ready_keccak),
+		.din_i(reg_file_to_ip.din),
+		.dout_keccak_i(dout_keccak),
+		.dout_valid_keccak_i(dout_valid_keccak),
+	        .start_keccak_o(start_keccak),
+		.last_block_keccak_o(last_block_keccak),
+		.dout_o(ip_to_reg_file.dout),
+		.din_keccak_o(din_keccak),
+		.din_valid_keccak_o(din_valid_keccak),
+		.status(ip_to_reg_file.status)	
+        );
+   
+			       			        	
 	keccak i_keccak (
-		.clk_i,
-		.rst_i,
-		.start(reg_file_to_ip.ctrl1.start.q),
-		.din(reg_file_to_ip.din),
-		.din_valid(reg_file_to_ip.ctrl1.din_valid.q),
-		.buffer_full(ip_to_reg_file.ctrl2.buffer_full.d),
-		.last_block(reg_file_to_ip.ctrl1.last_block.q),
-		.ready(ip_to_reg_file.ctrl2.ready.d),
-		.dout(ip_to_reg_file.dout),
-		.dout_valid(ip_to_reg_file.ctrl2_dout_valid.d)
+		.clk(clk_i),
+		.rst_n(rst_ni),
+		.start(start_keccak),
+		.din(din_keccak),
+		.din_valid(din_valid_keccak),
+		.buffer_full(),
+		.last_block(last_block_keccak),
+		.ready(ready_keccak),
+		.dout(dout_keccak),
+		.dout_valid(dout_valid_keccak)
 	);
 
-endmodule : keccak_top
-		
-		
+	assign ip_to_reg_file.dout = Dout_dummy;
 
+endmodule : keccak_top
