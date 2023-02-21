@@ -1,7 +1,6 @@
 #!/bin/bash
 
 echo "Insert which part of CRYSTALS-kyber768 do you want to simulate:"
-eecho "Insert which part of CRYSTALS-kyber768 do you want to simulate:"
 echo "	- keygen"
 echo "	- enc"
 echo "	- dec"

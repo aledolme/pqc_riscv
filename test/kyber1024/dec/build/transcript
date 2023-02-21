@@ -1,0 +1,155 @@
+# //  Questa Sim-64
+# //  Version 2020.4 linux_x86_64 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# source /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/sim/tcl_files/config/run_and_exit.tcl
+# source /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/sim/tcl_files/run.tcl
+# vsim -c -quiet vopt_tb -t ps "+nowarnTRAN" "+nowarnTSCALE" "+nowarnTFMPC" -suppress 8386 "+UVM_NO_RELNOTES" "+ENTRY_POINT=0x1c008080" -permit_unmatched_virtual_intf -voptargs="+acc -assertdebug -bitscalars -fsmdebug -linedebug" -gBAUDRATE=115200 -gLOAD_L2=JTAG 
+# Start time: 17:02:41 on Feb 21,2023
+# ** Warning: (vsim-3770) Failed to find user specified function 'jtag_tick' in DPI precompiled library search list "/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so ".
+#    Time: 0 ps  Iteration: 0  Region: /SimJTAG_sv_unit File: /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/rtl/tb/SimJTAG.sv
+# ** Warning: (vsim-8683) Uninitialized out port /tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_clk_rst_gen/i_fll_soc/i_FLL_digital/TQ has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_clk_rst_gen/i_fll_soc/i_FLL_digital/JTQ has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_clk_rst_gen/i_fll_per/i_FLL_digital/TQ has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_clk_rst_gen/i_fll_per/i_FLL_digital/JTQ has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_clk_rst_gen/i_fll_cluster/i_FLL_digital/TQ has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_clk_rst_gen/i_fll_cluster/i_FLL_digital/JTQ has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-3040) Command line generic/parameter "LOAD_L2" not found in design.
+#  
+run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# ** Warning: (vsim-7) Failed to open readmem file "/../rtl/vip/camera/img/frame0.img" in read mode.
+# No such file or directory. (errno = ENOENT)    : /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/rtl/vip/camera/cam_vip.sv(88)
+#    Time: 0 ps  Iteration: 0  Instance: /tb_pulp/genblk2/i_cam_vip
+# ** Warning: (vsim-7) Failed to open readmem file "/../rtl/vip/camera/img/frame1.img" in read mode.
+# No such file or directory. (errno = ENOENT)    : /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/rtl/vip/camera/cam_vip.sv(89)
+#    Time: 0 ps  Iteration: 0  Instance: /tb_pulp/genblk2/i_cam_vip
+# [cv32e40p_core]: PULP_XPULP =           1, PULP_CLUSTER =           0, FPU           1, PULP_ZFINX           0, NUM_MHPMCOUNTERS           1
+# [TB  ]       0ns - Asserting hard reset
+# [TB  ]       1ns - Using FLL
+# [TB  ]       1ns - Not using CAM SDVT
+# [TB  ]       1ns - Loading default stimuli
+# [TB  ]       1ns - Entry point is set to 0x1c008080
+# [JTAG]     701ns - Soft Reset Done
+# [JTAG]   33301ns - Bypass Test Passed
+# [JTAG]   43701ns - Tap ID: 50001db3
+# [JTAG]   43701ns - Tap ID Test PASSED
+# [TIF ]   50301ns - Init
+# [TB  ]   50301ns - Enabling clock out via jtag
+# [TB  ]   50301ns - jtag_conf_reg set to xxx
+# [TB  ]   50301ns - Releasing hard reset
+# [CORE_TRACER 992] Output filename is: trace_core_000003e0.log
+# [TB  ]   51901ns - Init PULP TAP
+# [PULP]   66001ns - WRITE32 burst @1c008080 for           4 bytes.
+# [TB  ]   66001ns - Write32 PULP TAP
+# [JTAG]  130501ns - R/W test of L2 succeeded
+# [TB  ]  176201ns - Halting the Core
+# [TB  ]  235001ns - Writing the boot address into dpc
+# [TB  ]  279101ns - Loading L2 via JTAG
+# [JTAG]  279101ns - Loading L2 with pulp tap jtag interface
+# [PULP] 1110801ns - WRITE32 burst @1c000000 for        1024 bytes.
+# [PULP] 1940901ns - WRITE32 burst @1c000400 for        1024 bytes.
+# [PULP] 2771001ns - WRITE32 burst @1c000800 for        1024 bytes.
+# [PULP] 3601101ns - WRITE32 burst @1c000c00 for        1024 bytes.
+# [PULP] 4431201ns - WRITE32 burst @1c001000 for        1024 bytes.
+# [PULP] 5261301ns - WRITE32 burst @1c001400 for        1024 bytes.
+# [PULP] 6091401ns - WRITE32 burst @1c001800 for        1024 bytes.
+# [PULP] 6921501ns - WRITE32 burst @1c001c00 for        1024 bytes.
+# [PULP] 7751601ns - WRITE32 burst @1c002000 for        1024 bytes.
+# [PULP] 8581701ns - WRITE32 burst @1c002400 for        1024 bytes.
+# [PULP] 9411801ns - WRITE32 burst @1c002800 for        1024 bytes.
+# [PULP] 10241901ns - WRITE32 burst @1c002c00 for        1024 bytes.
+# [PULP] 11072001ns - WRITE32 burst @1c003000 for        1024 bytes.
+# [PULP] 11902101ns - WRITE32 burst @1c003400 for        1024 bytes.
+# [PULP] 12732201ns - WRITE32 burst @1c003800 for        1024 bytes.
+# [PULP] 13562301ns - WRITE32 burst @1c003c00 for        1024 bytes.
+# [PULP] 14392401ns - WRITE32 burst @1c004000 for        1024 bytes.
+# [PULP] 15222501ns - WRITE32 burst @1c004400 for        1024 bytes.
+# [PULP] 16052601ns - WRITE32 burst @1c004800 for        1024 bytes.
+# [PULP] 16882701ns - WRITE32 burst @1c004c00 for        1024 bytes.
+# [PULP] 17712801ns - WRITE32 burst @1c005000 for        1024 bytes.
+# [PULP] 18542901ns - WRITE32 burst @1c005400 for        1024 bytes.
+# [PULP] 19373001ns - WRITE32 burst @1c005800 for        1024 bytes.
+# [PULP] 20203101ns - WRITE32 burst @1c005c00 for        1024 bytes.
+# [PULP] 20694001ns - WRITE32 burst @1c006000 for         600 bytes.
+# [PULP] 21524101ns - WRITE32 burst @1c008000 for        1024 bytes.
+# [PULP] 22354201ns - WRITE32 burst @1c008400 for        1024 bytes.
+# [PULP] 23184301ns - WRITE32 burst @1c008800 for        1024 bytes.
+# [PULP] 24014401ns - WRITE32 burst @1c008c00 for        1024 bytes.
+# [PULP] 24844501ns - WRITE32 burst @1c009000 for        1024 bytes.
+# [PULP] 25674601ns - WRITE32 burst @1c009400 for        1024 bytes.
+# [PULP] 26504701ns - WRITE32 burst @1c009800 for        1024 bytes.
+# [PULP] 27334801ns - WRITE32 burst @1c009c00 for        1024 bytes.
+# [PULP] 28164901ns - WRITE32 burst @1c00a000 for        1024 bytes.
+# [PULP] 28995001ns - WRITE32 burst @1c00a400 for        1024 bytes.
+# [PULP] 29825101ns - WRITE32 burst @1c00a800 for        1024 bytes.
+# [PULP] 30655201ns - WRITE32 burst @1c00ac00 for        1024 bytes.
+# [PULP] 31485301ns - WRITE32 burst @1c00b000 for        1024 bytes.
+# [PULP] 32315401ns - WRITE32 burst @1c00b400 for        1024 bytes.
+# [PULP] 33145501ns - WRITE32 burst @1c00b800 for        1024 bytes.
+# [PULP] 33975601ns - WRITE32 burst @1c00bc00 for        1024 bytes.
+# [PULP] 34805701ns - WRITE32 burst @1c00c000 for        1024 bytes.
+# [PULP] 35635801ns - WRITE32 burst @1c00c400 for        1024 bytes.
+# [PULP] 36465901ns - WRITE32 burst @1c00c800 for        1024 bytes.
+# [PULP] 37296001ns - WRITE32 burst @1c00cc00 for        1024 bytes.
+# [PULP] 38126101ns - WRITE32 burst @1c00d000 for        1024 bytes.
+# [PULP] 38956201ns - WRITE32 burst @1c00d400 for        1024 bytes.
+# [PULP] 39786301ns - WRITE32 burst @1c00d800 for        1024 bytes.
+# [PULP] 40616401ns - WRITE32 burst @1c00dc00 for        1024 bytes.
+# [PULP] 41446501ns - WRITE32 burst @1c00e000 for        1024 bytes.
+# [PULP] 42276601ns - WRITE32 burst @1c00e400 for        1024 bytes.
+# [PULP] 43106701ns - WRITE32 burst @1c00e800 for        1024 bytes.
+# [PULP] 43936801ns - WRITE32 burst @1c00ec00 for        1024 bytes.
+# [PULP] 44766901ns - WRITE32 burst @1c00f000 for        1024 bytes.
+# [PULP] 45001801ns - WRITE32 burst @1c00f400 for         280 bytes.
+# [TB  ] 45003401ns - Resuming the CORE
+# [TB  ] 45047501ns - retrying debug reg access
+# [TB  ] 45076801ns - retrying debug reg access
+# [TB  ] 45106101ns - retrying debug reg access
+# [TB  ] 45135401ns - retrying debug reg access
+# [TB  ] 45164701ns - retrying debug reg access
+# [TB  ] 45194001ns - retrying debug reg access
+# [TB  ] 45223301ns - retrying debug reg access
+# [TB  ] 45252601ns - retrying debug reg access
+# [TB  ] 45281901ns - retrying debug reg access
+# [TB  ] 45311201ns - retrying debug reg access
+# [TB  ] 45340501ns - retrying debug reg access
+# [TB  ] 45369801ns - retrying debug reg access
+# [TB  ] 45399101ns - retrying debug reg access
+# [TB  ] 45428401ns - retrying debug reg access
+# [TB  ] 45457701ns - retrying debug reg access
+# [TB  ] 45487001ns - retrying debug reg access
+# [TB  ] 45516301ns - retrying debug reg access
+# [TB  ] 45545601ns - retrying debug reg access
+# [TB  ] 45574901ns - retrying debug reg access
+# [TB  ] 45604201ns - retrying debug reg access
+# [TB  ] 45633501ns - retrying debug reg access
+# [TB  ] 45662801ns - retrying debug reg access
+# [TB  ] 45692101ns - retrying debug reg access
+# [TB  ] 45721401ns - retrying debug reg access
+# [TB  ] 45750701ns - retrying debug reg access
+# [TB  ] 46324101ns - Waiting for end of computation
