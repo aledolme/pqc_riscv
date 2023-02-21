@@ -7,4 +7,6 @@ test/keccak_ip/build/
 test/keccak_ip_v2/build/
 test/SHA3/build/
 test/keccak/build/
-test/kyber/build/
+test/kyber768/keygen/build/
+test/kyber768/enc/build/
+test/kyber768/dec/build/
