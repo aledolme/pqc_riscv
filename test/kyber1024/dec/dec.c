@@ -6,13 +6,54 @@
 #include "../api.h"
 #include "../randombytes.h"
 
+static void printbytes(const uint8_t *x, size_t xlen) {
+    size_t i;
+    for (i = 0; i < xlen; i++) {
+        printf("%02x", x[i]);
+    }
+    printf("\n");
+    }
+
 
 int main(void) {
-    uint8_t key_a[PQCLEAN_KYBER1024_CLEAN_CRYPTO_BYTES];
-    uint8_t pk[PQCLEAN_KYBER1024_CLEAN_CRYPTO_PUBLICKEYBYTES];
-    uint8_t sendb[PQCLEAN_KYBER1024_CLEAN_CRYPTO_CIPHERTEXTBYTES];
-    uint8_t sk_a[PQCLEAN_KYBER1024_CLEAN_CRYPTO_SECRETKEYBYTES];
+    static uint8_t key_a[PQCLEAN_KYBER1024_CLEAN_CRYPTO_BYTES], key_b[PQCLEAN_KYBER1024_CLEAN_CRYPTO_BYTES];
+    static uint8_t pk[PQCLEAN_KYBER1024_CLEAN_CRYPTO_PUBLICKEYBYTES];
+    static uint8_t sendb[PQCLEAN_KYBER1024_CLEAN_CRYPTO_CIPHERTEXTBYTES];
+    static uint8_t sk_a[PQCLEAN_KYBER1024_CLEAN_CRYPTO_SECRETKEYBYTES];
     int j;
+
+    key_b[0] = 0x19;
+key_b[1] = 0xc3;
+key_b[2] = 0x39;
+key_b[3] = 0xfa;
+key_b[4] = 0x0a;
+key_b[5] = 0xea;
+key_b[6] = 0x4e;
+key_b[7] = 0x59;
+key_b[8] = 0x66;
+key_b[9] = 0x79;
+key_b[10] = 0x2a;
+key_b[11] = 0xac;
+key_b[12] = 0xeb;
+key_b[13] = 0x13;
+key_b[14] = 0xcf;
+key_b[15] = 0x17;
+key_b[16] = 0x5b;
+key_b[17] = 0xa0;
+key_b[18] = 0x6e;
+key_b[19] = 0x4a;
+key_b[20] = 0x95;
+key_b[21] = 0x03;
+key_b[22] = 0x0e;
+key_b[23] = 0xae;
+key_b[24] = 0x9f;
+key_b[25] = 0xbf;
+key_b[26] = 0x10;
+key_b[27] = 0xa6;
+key_b[28] = 0x2b;
+key_b[29] = 0x7e;
+key_b[30] = 0x46;
+key_b[31] = 0x0d;
 
 sendb[0] = 0x35;
 sendb[1] = 0x61;
@@ -4757,7 +4798,14 @@ sk_a[3167] = 0xd0;
 	PQCLEAN_KYBER1024_CLEAN_crypto_kem_dec(key_a, sendb, sk_a);
     printf("Decapsulation done!\n");
     
+    printf("key_a:\n");
+    printbytes(key_a, PQCLEAN_KYBER1024_CLEAN_CRYPTO_BYTES);
     
-    
+    for (j = 0; j < PQCLEAN_KYBER1024_CLEAN_CRYPTO_BYTES; j++) {
+        if (key_a[j] != key_b[j]) {
+            printf("ERROR\n");
+            return -1;
+        }
+	}
     return 0;
 }

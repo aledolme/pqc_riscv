@@ -15,7 +15,7 @@
 # source /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/sim/tcl_files/config/run_and_exit.tcl
 # source /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/sim/tcl_files/run.tcl
 # vsim -c -quiet vopt_tb -t ps "+nowarnTRAN" "+nowarnTSCALE" "+nowarnTFMPC" -suppress 8386 "+UVM_NO_RELNOTES" "+ENTRY_POINT=0x1c008080" -permit_unmatched_virtual_intf -voptargs="+acc -assertdebug -bitscalars -fsmdebug -linedebug" -gBAUDRATE=115200 -gLOAD_L2=JTAG 
-# Start time: 17:02:41 on Feb 21,2023
+# Start time: 11:57:02 on Feb 22,2023
 # ** Warning: (vsim-3770) Failed to find user specified function 'jtag_tick' in DPI precompiled library search list "/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so ".
 #    Time: 0 ps  Iteration: 0  Region: /SimJTAG_sv_unit File: /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/rtl/tb/SimJTAG.sv
 # ** Warning: (vsim-8683) Uninitialized out port /tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_clk_rst_gen/i_fll_soc/i_FLL_digital/TQ has no driver.
@@ -95,61 +95,70 @@ run -all
 # [PULP] 18542901ns - WRITE32 burst @1c005400 for        1024 bytes.
 # [PULP] 19373001ns - WRITE32 burst @1c005800 for        1024 bytes.
 # [PULP] 20203101ns - WRITE32 burst @1c005c00 for        1024 bytes.
-# [PULP] 20694001ns - WRITE32 burst @1c006000 for         600 bytes.
-# [PULP] 21524101ns - WRITE32 burst @1c008000 for        1024 bytes.
-# [PULP] 22354201ns - WRITE32 burst @1c008400 for        1024 bytes.
-# [PULP] 23184301ns - WRITE32 burst @1c008800 for        1024 bytes.
-# [PULP] 24014401ns - WRITE32 burst @1c008c00 for        1024 bytes.
-# [PULP] 24844501ns - WRITE32 burst @1c009000 for        1024 bytes.
-# [PULP] 25674601ns - WRITE32 burst @1c009400 for        1024 bytes.
-# [PULP] 26504701ns - WRITE32 burst @1c009800 for        1024 bytes.
-# [PULP] 27334801ns - WRITE32 burst @1c009c00 for        1024 bytes.
-# [PULP] 28164901ns - WRITE32 burst @1c00a000 for        1024 bytes.
-# [PULP] 28995001ns - WRITE32 burst @1c00a400 for        1024 bytes.
-# [PULP] 29825101ns - WRITE32 burst @1c00a800 for        1024 bytes.
-# [PULP] 30655201ns - WRITE32 burst @1c00ac00 for        1024 bytes.
-# [PULP] 31485301ns - WRITE32 burst @1c00b000 for        1024 bytes.
-# [PULP] 32315401ns - WRITE32 burst @1c00b400 for        1024 bytes.
-# [PULP] 33145501ns - WRITE32 burst @1c00b800 for        1024 bytes.
-# [PULP] 33975601ns - WRITE32 burst @1c00bc00 for        1024 bytes.
-# [PULP] 34805701ns - WRITE32 burst @1c00c000 for        1024 bytes.
-# [PULP] 35635801ns - WRITE32 burst @1c00c400 for        1024 bytes.
-# [PULP] 36465901ns - WRITE32 burst @1c00c800 for        1024 bytes.
-# [PULP] 37296001ns - WRITE32 burst @1c00cc00 for        1024 bytes.
-# [PULP] 38126101ns - WRITE32 burst @1c00d000 for        1024 bytes.
-# [PULP] 38956201ns - WRITE32 burst @1c00d400 for        1024 bytes.
-# [PULP] 39786301ns - WRITE32 burst @1c00d800 for        1024 bytes.
-# [PULP] 40616401ns - WRITE32 burst @1c00dc00 for        1024 bytes.
-# [PULP] 41446501ns - WRITE32 burst @1c00e000 for        1024 bytes.
-# [PULP] 42276601ns - WRITE32 burst @1c00e400 for        1024 bytes.
-# [PULP] 43106701ns - WRITE32 burst @1c00e800 for        1024 bytes.
-# [PULP] 43936801ns - WRITE32 burst @1c00ec00 for        1024 bytes.
-# [PULP] 44766901ns - WRITE32 burst @1c00f000 for        1024 bytes.
-# [PULP] 45001801ns - WRITE32 burst @1c00f400 for         280 bytes.
-# [TB  ] 45003401ns - Resuming the CORE
-# [TB  ] 45047501ns - retrying debug reg access
-# [TB  ] 45076801ns - retrying debug reg access
-# [TB  ] 45106101ns - retrying debug reg access
-# [TB  ] 45135401ns - retrying debug reg access
-# [TB  ] 45164701ns - retrying debug reg access
-# [TB  ] 45194001ns - retrying debug reg access
-# [TB  ] 45223301ns - retrying debug reg access
-# [TB  ] 45252601ns - retrying debug reg access
-# [TB  ] 45281901ns - retrying debug reg access
-# [TB  ] 45311201ns - retrying debug reg access
-# [TB  ] 45340501ns - retrying debug reg access
-# [TB  ] 45369801ns - retrying debug reg access
-# [TB  ] 45399101ns - retrying debug reg access
-# [TB  ] 45428401ns - retrying debug reg access
-# [TB  ] 45457701ns - retrying debug reg access
-# [TB  ] 45487001ns - retrying debug reg access
-# [TB  ] 45516301ns - retrying debug reg access
-# [TB  ] 45545601ns - retrying debug reg access
-# [TB  ] 45574901ns - retrying debug reg access
-# [TB  ] 45604201ns - retrying debug reg access
-# [TB  ] 45633501ns - retrying debug reg access
-# [TB  ] 45662801ns - retrying debug reg access
-# [TB  ] 45692101ns - retrying debug reg access
-# [TB  ] 45721401ns - retrying debug reg access
-# [TB  ] 45750701ns - retrying debug reg access
-# [TB  ] 46324101ns - Waiting for end of computation
+# [PULP] 21033201ns - WRITE32 burst @1c006000 for        1024 bytes.
+# [PULP] 21863301ns - WRITE32 burst @1c006400 for        1024 bytes.
+# [PULP] 22693401ns - WRITE32 burst @1c006800 for        1024 bytes.
+# [PULP] 23523501ns - WRITE32 burst @1c006c00 for        1024 bytes.
+# [PULP] 24353601ns - WRITE32 burst @1c007000 for        1024 bytes.
+# [PULP] 24626901ns - WRITE32 burst @1c007400 for         328 bytes.
+# [PULP] 25457001ns - WRITE32 burst @1c008000 for        1024 bytes.
+# [PULP] 26287101ns - WRITE32 burst @1c008400 for        1024 bytes.
+# [PULP] 27117201ns - WRITE32 burst @1c008800 for        1024 bytes.
+# [PULP] 27947301ns - WRITE32 burst @1c008c00 for        1024 bytes.
+# [PULP] 28777401ns - WRITE32 burst @1c009000 for        1024 bytes.
+# [PULP] 29607501ns - WRITE32 burst @1c009400 for        1024 bytes.
+# [PULP] 30437601ns - WRITE32 burst @1c009800 for        1024 bytes.
+# [PULP] 31267701ns - WRITE32 burst @1c009c00 for        1024 bytes.
+# [PULP] 32097801ns - WRITE32 burst @1c00a000 for        1024 bytes.
+# [PULP] 32927901ns - WRITE32 burst @1c00a400 for        1024 bytes.
+# [PULP] 33758001ns - WRITE32 burst @1c00a800 for        1024 bytes.
+# [PULP] 34588101ns - WRITE32 burst @1c00ac00 for        1024 bytes.
+# [PULP] 35418201ns - WRITE32 burst @1c00b000 for        1024 bytes.
+# [PULP] 36248301ns - WRITE32 burst @1c00b400 for        1024 bytes.
+# [PULP] 37078401ns - WRITE32 burst @1c00b800 for        1024 bytes.
+# [PULP] 37908501ns - WRITE32 burst @1c00bc00 for        1024 bytes.
+# [PULP] 38738601ns - WRITE32 burst @1c00c000 for        1024 bytes.
+# [PULP] 39568701ns - WRITE32 burst @1c00c400 for        1024 bytes.
+# [PULP] 40398801ns - WRITE32 burst @1c00c800 for        1024 bytes.
+# [PULP] 41228901ns - WRITE32 burst @1c00cc00 for        1024 bytes.
+# [PULP] 42059001ns - WRITE32 burst @1c00d000 for        1024 bytes.
+# [PULP] 42889101ns - WRITE32 burst @1c00d400 for        1024 bytes.
+# [PULP] 43719201ns - WRITE32 burst @1c00d800 for        1024 bytes.
+# [PULP] 44549301ns - WRITE32 burst @1c00dc00 for        1024 bytes.
+# [PULP] 45379401ns - WRITE32 burst @1c00e000 for        1024 bytes.
+# [PULP] 46209501ns - WRITE32 burst @1c00e400 for        1024 bytes.
+# [PULP] 47039601ns - WRITE32 burst @1c00e800 for        1024 bytes.
+# [PULP] 47869701ns - WRITE32 burst @1c00ec00 for        1024 bytes.
+# [PULP] 48699801ns - WRITE32 burst @1c00f000 for        1024 bytes.
+# [PULP] 49529901ns - WRITE32 burst @1c00f400 for        1024 bytes.
+# [PULP] 50033601ns - WRITE32 burst @1c00f800 for         616 bytes.
+# [TB  ] 50035201ns - Resuming the CORE
+# [TB  ] 50608701ns - retrying debug reg access
+# [TB  ] 50638001ns - retrying debug reg access
+# [TB  ] 50667301ns - retrying debug reg access
+# [TB  ] 50696601ns - retrying debug reg access
+# [TB  ] 50725901ns - retrying debug reg access
+# [TB  ] 50755201ns - retrying debug reg access
+# [TB  ] 50784501ns - retrying debug reg access
+# [TB  ] 50813801ns - retrying debug reg access
+# [TB  ] 50843101ns - retrying debug reg access
+# [TB  ] 50872401ns - retrying debug reg access
+# [TB  ] 50901701ns - retrying debug reg access
+# [TB  ] 50931001ns - retrying debug reg access
+# [TB  ] 50960301ns - retrying debug reg access
+# [TB  ] 50989601ns - retrying debug reg access
+# [TB  ] 51018901ns - retrying debug reg access
+# [TB  ] 51048201ns - retrying debug reg access
+# [TB  ] 51077501ns - retrying debug reg access
+# [TB  ] 51106801ns - retrying debug reg access
+# [TB  ] 51136101ns - retrying debug reg access
+# [TB  ] 51180101ns - Waiting for end of computation
+# [STDOUT-CL31_PE0] Decapsulation done!
+# [STDOUT-CL31_PE0] key_a:
+# [STDOUT-CL31_PE0] 19c339fa0aea4e5966792aaceb13cf175ba06e4a95030eae9fbf10a62b7e460d
+# [TB  ] 82178301ns - Received status core: 0x00000000
+# ** Note: $stop    : /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/rtl/tb/tb_pulp.sv(776)
+#    Time: 82178301 ns  Iteration: 0  Instance: /tb_pulp
+# Break in Module tb_pulp at /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/rtl/tb/tb_pulp.sv line 776
+# End time: 12:17:39 on Feb 22,2023, Elapsed time: 0:20:37
+# Errors: 0, Warnings: 10
