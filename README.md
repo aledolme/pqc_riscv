@@ -50,3 +50,13 @@ Now we are ready to set up the simulation environment. All these commands are ad
 ## RTL-simulation
 Now you need Questasim to do an RTL simulation of PULPissimo. To understand how the rtl-simulation-platform is buid and the meaning of all the commands present in .sh files, link [here](https://github.com/pulp-platform/pulpissimo/blob/master/README.md#building-the-rtl-simulation-platform).
 
+## Downloading and running tests
+Finally, you can download and run tests. Now you can change directory to your desired test e.g.: for testing simply a Keccak trasformation, run
+```
+cd ../test/keccak_ip
+make clean all
+make dis > keccak.s
+make -f Makefile run gui=1
+```
+`make dis` will provide you the disassembly of your application, while `make run gui=1` will start Modelsim GUI.
+
