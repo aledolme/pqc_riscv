@@ -1,5 +1,0 @@
-#!/bin/bash
-
-/usr/bin/gcc -o shake128 fips202.c fips202.h test_shake128.c -std=c99
-/usr/bin/gcc -o shake256 fips202.c fips202.h test_shake256.c -std=c99
-

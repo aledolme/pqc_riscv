@@ -1,9 +1,0 @@
-GCC ?= /usr/bin/gcc
-CFLAGS += -Wall
-RM = /bin/rm
-
-HEADERS = keccak.h
-SOURCES = keccak.c
-
-main_Keccak: $(SOURCES) $(HEADERS) main.c
-	$(GCC) $(CFLAGS) $(SOURCES) main.c -o main_Keccak
