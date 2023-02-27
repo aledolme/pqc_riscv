@@ -47,6 +47,6 @@ source pulp-runtime/configs/pulpissimo.sh
 ```
 Now we are ready to set up the simulation environment. All these commands are added in each .sh file.
 
-##RTL-simulation
+## RTL-simulation
 Now you need Questasim to do an RTL simulation of PULPissimo. To understand how the rtl-simulation-platform is buid and the meaning of all the commands present in .sh files, link [here](https://github.com/pulp-platform/pulpissimo/blob/master/README.md#building-the-rtl-simulation-platform).
 
