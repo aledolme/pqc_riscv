@@ -7,8 +7,15 @@ If you are using this accelerator, please refers to:
 
 
 # Getting started
-**pulpissimo** is the microcontroller architecture of the more recent PULP chips, part of the ongoing "PULP platform" collaboration between ETH Zurich and the University of Bologna - started in 2013. 
-**pulp-runtime** is a simple runtime for the Pulp architecture. 
+The RISC-V PULPissimo microcontroller (Figure I) from the open-source [PULP platform])(https://github.com/pulp-platform) project is used and configured to work with the 4-stage pipeline core RI5CY. Then, Keccak and [CRYSTALS-Kyber](https://github.com/PQClean/PQClean/tree/master/crypto_kem) algorithms are compiled using [PULP toolchain](https://github.com/pulp-platform/pulp-riscv-gnu-toolchain), setting the optimization flag '-O3' and increasing the
+stack’s memory size.
+
+The 'randombytes' file is modified, generating a pseudo-random sequence of bytes, while 'fips202'’s standard library functions are substituted
+by the one provided by PULP-team. The accelerator is driven in a memory-mapped fashion style and attached to the SoC through an AXI plug, as shown in Figure - II . Its dependency to PULPissimo is managed by [Bender](https://github.com/pulp-platform/bender), while the Keccak register interface is
+generated using [reggen tool](https://docs.opentitan.org/util/reggen/doc/).
+The high-speed Keccak core developed by Keccak teams is optimized accordingly to our application (Figure - III ). It implements transformation
+rounds discussed in section 2. As in [Dolmeta 2022], the size of the round constant generator is reduced from 64-bit to one-byte size, simplifying the computation in ι. The accelerator is simulated and tested using ModelSim, exploiting a dedicated driver
+
 ![Image](https://github.com/aledolme/pqc_riscv/blob/main/keccak_ip.svg)
 
 ## Folder organization
