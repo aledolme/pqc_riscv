@@ -36,10 +36,10 @@ git clone --recursive https://github.com/aledolme/pqc_riscv
 ```
 Different bash files are present, to properly set the overall enviroment. In order to run #.sh files, point:
 ```
-> source YOUR_QUESTA_SIM_PATH
-> export PULP_RISCV_GCC_TOOLCHAIN=YOUR_PULP_TOOLCHAIN_PATH
-> export PATH=$PULP_RISCV_GCC_TOOLCHAIN/bin:$PATH
-> export VSIM_PATH=$HOME/pqc_riscv
+source YOUR_QUESTA_SIM_PATH
+export PULP_RISCV_GCC_TOOLCHAIN=YOUR_PULP_TOOLCHAIN_PATH
+export PATH=$PULP_RISCV_GCC_TOOLCHAIN/bin:$PATH
+export VSIM_PATH=$HOME/pqc_riscv
 ```
 The simple runtime that ia cloned supports many different hardware configuration. We want PULPissimo, therefore:
 ```
