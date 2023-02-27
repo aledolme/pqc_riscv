@@ -24,16 +24,13 @@ rounds discussed in section 2. The size of the round constant generator is reduc
 - **pulp-runtime**: forked repository of the original pulp-runtime folder. Please refers to [pulp-runtime GitHub Pages](https://github.com/pulp-platform/pulp-runtime.git) for further information.  
 - **test**: contain the files required for tests.
 
-
+#Simple runtime
 ## Prerequisities
 Prerequisites are explained in detail in the [main repository](https://github.com/pulp-platform/pulpissimo). We report for the reader's convenience the main steps.
 
 First, install the system dependencies indicated [here](https://github.com/pulp-platform/pulp-runtime/blob/master/README.md).
 
-Then make sure you have  [riscv-gnu-toolchain](https://github.com/pulp-platform/pulp-riscv-gnu-toolchain) installed.
-
-#Simple runtime
-Get the repository:
+Then, make sure you have  [riscv-gnu-toolchain](https://github.com/pulp-platform/pulp-riscv-gnu-toolchain) installed, and get the repository:
 ```
 git clone --recursive https://github.com/aledolme/pqc_riscv
 ```
@@ -44,10 +41,12 @@ Different bash files are present, to properly set the overall enviroment. In ord
 > export PATH=$PULP_RISCV_GCC_TOOLCHAIN/bin:$PATH
 > export VSIM_PATH=$HOME/pqc_riscv
 ```
-We want PULPissimo. Therefore:
+The simple runtime that ia cloned supports many different hardware configuration. We want PULPissimo, therefore:
 ```
 source pulp-runtime/configs/pulpissimo.sh
 ```
-Now we are ready to set up the simulation environment. All the other required command are added in each .sh file.
-To understand how the rtl-simulation-platform is buid, link [here](https://github.com/pulp-platform/pulpissimo/blob/master/README.md#building-the-rtl-simulation-platform).
+Now we are ready to set up the simulation environment. All these commands are added in each .sh file.
+
+##RTL-simulation
+Now you need Questasim to do an RTL simulation of PULPissimo. To understand how the rtl-simulation-platform is buid and the meaning of all the commands present in .sh files, link [here](https://github.com/pulp-platform/pulpissimo/blob/master/README.md#building-the-rtl-simulation-platform).
 
