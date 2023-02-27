@@ -39,8 +39,11 @@ Get the repository:
 
 Different bash files are present, to properly set the overall enviroment. In order to run #.sh files, point:
 > source YOUR_QUESTA_SIM_PATH
+> 
 > export PULP_RISCV_GCC_TOOLCHAIN=YOUR_PULP_TOOLCHAIN_PATH
+> 
 > export PATH=$PULP_RISCV_GCC_TOOLCHAIN/bin:$PATH
+> 
 > export VSIM_PATH=$HOME/pqc_riscv
 
 We want PULPissimo. Therefore:
