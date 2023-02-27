@@ -60,3 +60,8 @@ make -f Makefile run gui=1
 ```
 `make dis` will provide you the disassembly of your application, while `make run gui=1` will start Modelsim GUI.
 
+There are three different folders:
+- `test/kyber512`
+- `test/kyber768` 
+- `test/kyber1024`
+Each containing three sub-folder: `keygen`, `enc` and `dec`.
