@@ -38,32 +38,15 @@ Get the repository:
 > git clone --recursive https://github.com/aledolme/pqc_riscv
 
 Different bash files are present, to properly set the overall enviroment. In order to run #.sh files, point:
-- your questa_sim path:
 > source YOUR_QUESTA_SIM_PATH
-- your PULP_RISCV_GCC_TOOLCHAIN to your riscv-toolchain path:
 > export PULP_RISCV_GCC_TOOLCHAIN=YOUR_PULP_TOOLCHAIN_PATH
-- your pulp-toolchain to your PATH variable:
-> xport PATH=$PULP_RISCV_GCC_TOOLCHAIN/bin:$PATH
-- your **VSIM_PATH*** to your repository path:
-> export VSIM_PATH=$HOME/Desktop/pqc_riscv
+> export PATH=$PULP_RISCV_GCC_TOOLCHAIN/bin:$PATH
+> export VSIM_PATH=$HOME/pqc_riscv
 
-We want PULPissimo.
+We want PULPissimo. Therefore:
 
-cd pulp-runtime
+> source pulp-runtime/configs/pulpissimo.sh
 
-Then, to use the CV32E40P (formely RI5CY) core, type:
+Now we are ready to set up the simulation environment. All the other required command are added in each .sh file.
+To understand how the rtl-simulation-platform is buid, link [here](https://github.com/pulp-platform/pulpissimo/blob/master/README.md#building-the-rtl-simulation-platform).
 
-source configs/pulpissimo_cv32.sh
-
-or to use the Ibex (formely zero-riscy) core:
-
-source configs/pulpissimo_ibex.sh
-
-Now we are ready to set up the simulation environment. Normally you would want to simulate the hardware design running your program, so go here.
-
-
-
-
-
-## Test
-In these 
