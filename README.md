@@ -34,22 +34,20 @@ Then make sure you have  [riscv-gnu-toolchain](https://github.com/pulp-platform/
 
 #Simple runtime
 Get the repository:
-
-> git clone --recursive https://github.com/aledolme/pqc_riscv
-
+```
+git clone --recursive https://github.com/aledolme/pqc_riscv
+```
 Different bash files are present, to properly set the overall enviroment. In order to run #.sh files, point:
+```
 > source YOUR_QUESTA_SIM_PATH
-> 
 > export PULP_RISCV_GCC_TOOLCHAIN=YOUR_PULP_TOOLCHAIN_PATH
-> 
 > export PATH=$PULP_RISCV_GCC_TOOLCHAIN/bin:$PATH
-> 
 > export VSIM_PATH=$HOME/pqc_riscv
-
+```
 We want PULPissimo. Therefore:
-
-> source pulp-runtime/configs/pulpissimo.sh
-
+```
+source pulp-runtime/configs/pulpissimo.sh
+```
 Now we are ready to set up the simulation environment. All the other required command are added in each .sh file.
 To understand how the rtl-simulation-platform is buid, link [here](https://github.com/pulp-platform/pulpissimo/blob/master/README.md#building-the-rtl-simulation-platform).
 
