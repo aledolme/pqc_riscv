@@ -24,7 +24,7 @@ rounds discussed in section 2. The size of the round constant generator is reduc
 - **pulp-runtime**: forked repository of the original pulp-runtime folder. Please refers to [pulp-runtime GitHub Pages](https://github.com/pulp-platform/pulp-runtime.git) for further information.  
 - **test**: contain the files required for tests.
 
-#Simple runtime
+# Simple runtime
 ## Prerequisities
 Prerequisites are explained in detail in the [main repository](https://github.com/pulp-platform/pulpissimo). We report for the reader's convenience the main steps.
 
