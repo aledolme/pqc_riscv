@@ -3,7 +3,7 @@
 In the pqc_riscv repository you can find an example of a post-quantum crytpographic (PQC) hardware accelerator for pulpissimo. 
 If you are using this accelerator, please refers to:
 
-> what
+> Implementation and Integration of Keccak accelerator on RISC-V for CRYSTALS-Kyber
 
 
 # Getting started
