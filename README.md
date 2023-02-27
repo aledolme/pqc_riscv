@@ -9,7 +9,7 @@ If you are using this accelerator, please refers to:
 # Getting started
 **pulpissimo** is the microcontroller architecture of the more recent PULP chips, part of the ongoing "PULP platform" collaboration between ETH Zurich and the University of Bologna - started in 2013. 
 **pulp-runtime** is a simple runtime for the Pulp architecture. 
-
+![Image](https://github.com/aledolme/pqc_riscv/blob/main/keccak_ip3.svg)
 
 ## Folder organization
 - **pulpissimo**: forked repository of the original pulpissimo folder. Please refers to [pulpissimo GitHub Pages](https://github.com/pulp-platform/pulpissimo) for further information. 
