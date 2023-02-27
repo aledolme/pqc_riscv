@@ -65,4 +65,8 @@ There are three different folders:
 - `test/kyber768` 
 - `test/kyber1024`
 
-Each containing three sub-folder: `keygen`, `enc` and `dec`.
+Each containing three sub-folder: `keygen`, `enc` and `dec`. To run one test, run:
+```
+source setup_kyber$ALG
+keygen/enc/dec
+```
