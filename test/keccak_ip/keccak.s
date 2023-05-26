@@ -70,15 +70,15 @@ Disassembly of section .vectors:
 Disassembly of section .text:
 
 1c0080c0 <_stext>:
-1c0080c0:	ffffc297          	auipc	t0,0xffffc
-1c0080c4:	07028293          	addi	t0,t0,112 # 1c004130 <stack>
-1c0080c8:	ffffc317          	auipc	t1,0xffffc
-1c0080cc:	08c30313          	addi	t1,t1,140 # 1c004154 <__l2_priv0_end>
+1c0080c0:	ffffe297          	auipc	t0,0xffffe
+1c0080c4:	07028293          	addi	t0,t0,112 # 1c006130 <stack>
+1c0080c8:	ffffe317          	auipc	t1,0xffffe
+1c0080cc:	08c30313          	addi	t1,t1,140 # 1c006154 <__l2_priv0_end>
 1c0080d0:	0002a023          	sw	zero,0(t0)
 1c0080d4:	0291                	addi	t0,t0,4
 1c0080d6:	fe62ede3          	bltu	t0,t1,1c0080d0 <_stext+0x10>
-1c0080da:	ffffc117          	auipc	sp,0xffffc
-1c0080de:	05610113          	addi	sp,sp,86 # 1c004130 <stack>
+1c0080da:	ffffe117          	auipc	sp,0xffffe
+1c0080de:	05610113          	addi	sp,sp,86 # 1c006130 <stack>
 1c0080e2:	3e4000ef          	jal	ra,1c0084c6 <pos_init_start>
 1c0080e6:	00000513          	li	a0,0
 1c0080ea:	00000593          	li	a1,0
@@ -189,8 +189,8 @@ Disassembly of section .text:
 1c008202:	c00007b7          	lui	a5,0xc0000
 1c008206:	8fd9                	or	a5,a5,a4
 1c008208:	c09c                	sw	a5,0(s1)
-1c00820a:	1c004437          	lui	s0,0x1c004
-1c00820e:	13440413          	addi	s0,s0,308 # 1c004134 <pos_fll_freq>
+1c00820a:	1c006437          	lui	s0,0x1c006
+1c00820e:	13440413          	addi	s0,s0,308 # 1c006134 <pos_fll_freq>
 1c008212:	00291993          	slli	s3,s2,0x2
 1c008216:	013406b3          	add	a3,s0,s3
 1c00821a:	0006aa03          	lw	s4,0(a3)
@@ -202,9 +202,9 @@ Disassembly of section .text:
 1c00822a:	073e                	slli	a4,a4,0xf
 1c00822c:	17fd                	addi	a5,a5,-1
 1c00822e:	00f75a33          	srl	s4,a4,a5
-1c008232:	1c004537          	lui	a0,0x1c004
+1c008232:	1c006537          	lui	a0,0x1c006
 1c008236:	0146a023          	sw	s4,0(a3)
-1c00823a:	13050513          	addi	a0,a0,304 # 1c004130 <stack>
+1c00823a:	13050513          	addi	a0,a0,304 # 1c006130 <stack>
 1c00823e:	954a                	add	a0,a0,s2
 1c008240:	4685                	li	a3,1
 1c008242:	00d50023          	sb	a3,0(a0)
@@ -227,9 +227,9 @@ Disassembly of section .text:
 1c008268:	4605                	li	a2,1
 1c00826a:	00ca17b3          	sll	a5,s4,a2
 1c00826e:	76e1                	lui	a3,0xffff8
-1c008270:	1c004537          	lui	a0,0x1c004
+1c008270:	1c006537          	lui	a0,0x1c006
 1c008274:	8efd                	and	a3,a3,a5
-1c008276:	13050513          	addi	a0,a0,304 # 1c004130 <stack>
+1c008276:	13050513          	addi	a0,a0,304 # 1c006130 <stack>
 1c00827a:	96ae                	add	a3,a3,a1
 1c00827c:	012505b3          	add	a1,a0,s2
 1c008280:	00c6d6b3          	srl	a3,a3,a2
@@ -259,12 +259,12 @@ Disassembly of section .text:
 1c0082bc:	b77d                	j	1c00826a <pos_fll_init+0xcc>
 
 1c0082be <pos_fll_constructor>:
-1c0082be:	1c0047b7          	lui	a5,0x1c004
-1c0082c2:	13478793          	addi	a5,a5,308 # 1c004134 <pos_fll_freq>
+1c0082be:	1c0067b7          	lui	a5,0x1c006
+1c0082c2:	13478793          	addi	a5,a5,308 # 1c006134 <pos_fll_freq>
 1c0082c6:	0007a023          	sw	zero,0(a5)
 1c0082ca:	0007a223          	sw	zero,4(a5)
-1c0082ce:	1c0047b7          	lui	a5,0x1c004
-1c0082d2:	12079823          	sh	zero,304(a5) # 1c004130 <stack>
+1c0082ce:	1c0067b7          	lui	a5,0x1c006
+1c0082d2:	12079823          	sh	zero,304(a5) # 1c006130 <stack>
 1c0082d6:	8082                	ret
 
 1c0082d8 <pos_soc_init>:
@@ -274,8 +274,8 @@ Disassembly of section .text:
 1c0082de:	37c5                	jal	1c0082be <pos_fll_constructor>
 1c0082e0:	4501                	li	a0,0
 1c0082e2:	3d75                	jal	1c00819e <pos_fll_init>
-1c0082e4:	1c004437          	lui	s0,0x1c004
-1c0082e8:	12a42e23          	sw	a0,316(s0) # 1c00413c <pos_freq_domains>
+1c0082e4:	1c006437          	lui	s0,0x1c006
+1c0082e8:	12a42e23          	sw	a0,316(s0) # 1c00613c <pos_freq_domains>
 1c0082ec:	4505                	li	a0,1
 1c0082ee:	3d45                	jal	1c00819e <pos_fll_init>
 1c0082f0:	13c40413          	addi	s0,s0,316
@@ -509,15 +509,15 @@ Disassembly of section .text:
 
 1c00853a <pos_allocs_init>:
 1c00853a:	1141                	addi	sp,sp,-16
-1c00853c:	1c0045b7          	lui	a1,0x1c004
+1c00853c:	1c0065b7          	lui	a1,0x1c006
 1c008540:	c606                	sw	ra,12(sp)
-1c008542:	15458793          	addi	a5,a1,340 # 1c004154 <__l2_priv0_end>
+1c008542:	15458793          	addi	a5,a1,340 # 1c006154 <__l2_priv0_end>
 1c008546:	1c008637          	lui	a2,0x1c008
 1c00854a:	04c7cc63          	blt	a5,a2,1c0085a2 <pos_allocs_init+0x68>
 1c00854e:	4581                	li	a1,0
 1c008550:	4601                	li	a2,0
-1c008552:	1c004537          	lui	a0,0x1c004
-1c008556:	14850513          	addi	a0,a0,328 # 1c004148 <pos_alloc_l2>
+1c008552:	1c006537          	lui	a0,0x1c006
+1c008556:	14850513          	addi	a0,a0,328 # 1c006148 <pos_alloc_l2>
 1c00855a:	37d1                	jal	1c00851e <pos_alloc_init>
 1c00855c:	1c0085b7          	lui	a1,0x1c008
 1c008560:	5f458793          	addi	a5,a1,1524 # 1c0085f4 <__l2_priv1_end>
@@ -525,17 +525,17 @@ Disassembly of section .text:
 1c008568:	02c7c963          	blt	a5,a2,1c00859a <pos_allocs_init+0x60>
 1c00856c:	4581                	li	a1,0
 1c00856e:	4601                	li	a2,0
-1c008570:	1c004537          	lui	a0,0x1c004
-1c008574:	14c50513          	addi	a0,a0,332 # 1c00414c <pos_alloc_l2+0x4>
+1c008570:	1c006537          	lui	a0,0x1c006
+1c008574:	14c50513          	addi	a0,a0,332 # 1c00614c <pos_alloc_l2+0x4>
 1c008578:	375d                	jal	1c00851e <pos_alloc_init>
 1c00857a:	1c0105b7          	lui	a1,0x1c010
 1c00857e:	00058793          	mv	a5,a1
 1c008582:	40b2                	lw	ra,12(sp)
 1c008584:	1c080637          	lui	a2,0x1c080
-1c008588:	1c004537          	lui	a0,0x1c004
+1c008588:	1c006537          	lui	a0,0x1c006
 1c00858c:	8e1d                	sub	a2,a2,a5
 1c00858e:	00058593          	mv	a1,a1
-1c008592:	15050513          	addi	a0,a0,336 # 1c004150 <pos_alloc_l2+0x8>
+1c008592:	15050513          	addi	a0,a0,336 # 1c006150 <pos_alloc_l2+0x8>
 1c008596:	0141                	addi	sp,sp,16
 1c008598:	b759                	j	1c00851e <pos_alloc_init>
 1c00859a:	8e1d                	sub	a2,a2,a5
