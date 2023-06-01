@@ -15,7 +15,7 @@
 # source /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/sim/tcl_files/config/run_and_exit.tcl
 # source /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/sim/tcl_files/run.tcl
 # vsim -c -quiet vopt_tb -t ps "+nowarnTRAN" "+nowarnTSCALE" "+nowarnTFMPC" -suppress 8386 "+UVM_NO_RELNOTES" "+ENTRY_POINT=0x1c008080" -permit_unmatched_virtual_intf -voptargs="+acc -assertdebug -bitscalars -fsmdebug -linedebug" -gBAUDRATE=115200 -gLOAD_L2=JTAG 
-# Start time: 10:53:26 on Jun 01,2023
+# Start time: 11:09:18 on Jun 01,2023
 # ** Warning: (vsim-3770) Failed to find user specified function 'jtag_tick' in DPI precompiled library search list "/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so ".
 #    Time: 0 ps  Iteration: 0  Region: /SimJTAG_sv_unit File: /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/rtl/tb/SimJTAG.sv
 # ** Warning: (vsim-8683) Uninitialized out port /tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_clk_rst_gen/i_fll_soc/i_FLL_digital/TQ has no driver.
@@ -32,57 +32,3 @@
 # This port will contribute value (U) to the signal network.
 # ** Warning: (vsim-3040) Command line generic/parameter "LOAD_L2" not found in design.
 #  
-add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm/i_ntt_intt_top/*
-do ../wave.do
-# ** UI-Msg: (vish-4014) No objects found matching '/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm/i_ntt_intt_pwm/*'.
-# Error in macro ./../wave.do line 5
-# ** UI-Msg: (vish-4014) No objects found matching '/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm/i_ntt_intt_pwm/*'.
-#     while executing
-# "add wave -divider NTT_INTT_PWM_BUS"
-run -all
-# ----------------------------------------------------------------
-# UVM-1.1d
-# (C) 2007-2013 Mentor Graphics Corporation
-# (C) 2007-2013 Cadence Design Systems, Inc.
-# (C) 2006-2013 Synopsys, Inc.
-# (C) 2011-2013 Cypress Semiconductor Corp.
-# ----------------------------------------------------------------
-# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
-# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
-# ** Warning: (vsim-7) Failed to open readmem file "/../rtl/vip/camera/img/frame0.img" in read mode.
-# No such file or directory. (errno = ENOENT)    : /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/rtl/vip/camera/cam_vip.sv(88)
-#    Time: 0 ps  Iteration: 0  Instance: /tb_pulp/genblk2/i_cam_vip
-# ** Warning: (vsim-7) Failed to open readmem file "/../rtl/vip/camera/img/frame1.img" in read mode.
-# No such file or directory. (errno = ENOENT)    : /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/rtl/vip/camera/cam_vip.sv(89)
-#    Time: 0 ps  Iteration: 0  Instance: /tb_pulp/genblk2/i_cam_vip
-# [cv32e40p_core]: PULP_XPULP =           1, PULP_CLUSTER =           0, FPU           1, PULP_ZFINX           0, NUM_MHPMCOUNTERS           1
-# [TB  ]       0ns - Asserting hard reset
-# [TB  ]       1ns - Using FLL
-# [TB  ]       1ns - Not using CAM SDVT
-# [TB  ]       1ns - Loading default stimuli
-# [TB  ]       1ns - Entry point is set to 0x1c008080
-# [JTAG]     701ns - Soft Reset Done
-# [JTAG]   33301ns - Bypass Test Passed
-# [JTAG]   43701ns - Tap ID: 50001db3
-# [JTAG]   43701ns - Tap ID Test PASSED
-# [TIF ]   50301ns - Init
-# [TB  ]   50301ns - Enabling clock out via jtag
-# [TB  ]   50301ns - jtag_conf_reg set to xxx
-# [TB  ]   50301ns - Releasing hard reset
-# [CORE_TRACER 992] Output filename is: trace_core_000003e0.log
-# [TB  ]   51901ns - Init PULP TAP
-# [PULP]   66001ns - WRITE32 burst @1c008080 for           4 bytes.
-# [TB  ]   66001ns - Write32 PULP TAP
-# [JTAG]  130501ns - R/W test of L2 succeeded
-# [TB  ]  176201ns - Halting the Core
-# [TB  ]  235001ns - Writing the boot address into dpc
-# [TB  ]  279101ns - Loading L2 via JTAG
-# [JTAG]  279101ns - Loading L2 with pulp tap jtag interface
-# [PULP] 1110801ns - WRITE32 burst @1c000000 for        1024 bytes.
-# [PULP] 1940901ns - WRITE32 burst @1c000400 for        1024 bytes.
-# [PULP] 2771001ns - WRITE32 burst @1c000800 for        1024 bytes.
-# [PULP] 3601101ns - WRITE32 burst @1c000c00 for        1024 bytes.
-# [PULP] 4431201ns - WRITE32 burst @1c001000 for        1024 bytes.
-# [PULP] 5261301ns - WRITE32 burst @1c001400 for        1024 bytes.
-# [PULP] 6091401ns - WRITE32 burst @1c001800 for        1024 bytes.
-# [PULP] 6921501ns - WRITE32 burst @1c001c00 for        1024 bytes.
