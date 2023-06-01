@@ -15,7 +15,7 @@
 # source /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/sim/tcl_files/config/run_and_exit.tcl
 # source /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/sim/tcl_files/run.tcl
 # vsim -c -quiet vopt_tb -t ps "+nowarnTRAN" "+nowarnTSCALE" "+nowarnTFMPC" -suppress 8386 "+UVM_NO_RELNOTES" "+ENTRY_POINT=0x1c008080" -permit_unmatched_virtual_intf -voptargs="+acc -assertdebug -bitscalars -fsmdebug -linedebug" -gBAUDRATE=115200 -gLOAD_L2=JTAG 
-# Start time: 11:14:08 on Jun 01,2023
+# Start time: 11:57:59 on Jun 01,2023
 # ** Warning: (vsim-3770) Failed to find user specified function 'jtag_tick' in DPI precompiled library search list "/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so ".
 #    Time: 0 ps  Iteration: 0  Region: /SimJTAG_sv_unit File: /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/rtl/tb/SimJTAG.sv
 # ** Warning: (vsim-8683) Uninitialized out port /tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_clk_rst_gen/i_fll_soc/i_FLL_digital/TQ has no driver.
@@ -32,3 +32,118 @@
 # This port will contribute value (U) to the signal network.
 # ** Warning: (vsim-3040) Command line generic/parameter "LOAD_L2" not found in design.
 #  
+do ../wave.do
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# ** Warning: (vsim-7) Failed to open readmem file "/../rtl/vip/camera/img/frame0.img" in read mode.
+# No such file or directory. (errno = ENOENT)    : /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/rtl/vip/camera/cam_vip.sv(88)
+#    Time: 0 ps  Iteration: 0  Instance: /tb_pulp/genblk2/i_cam_vip
+# ** Warning: (vsim-7) Failed to open readmem file "/../rtl/vip/camera/img/frame1.img" in read mode.
+# No such file or directory. (errno = ENOENT)    : /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/rtl/vip/camera/cam_vip.sv(89)
+#    Time: 0 ps  Iteration: 0  Instance: /tb_pulp/genblk2/i_cam_vip
+# [cv32e40p_core]: PULP_XPULP =           1, PULP_CLUSTER =           0, FPU           1, PULP_ZFINX           0, NUM_MHPMCOUNTERS           1
+# [TB  ]       0ns - Asserting hard reset
+# [TB  ]       1ns - Using FLL
+# [TB  ]       1ns - Not using CAM SDVT
+# [TB  ]       1ns - Loading default stimuli
+# [TB  ]       1ns - Entry point is set to 0x1c008080
+# [JTAG]     701ns - Soft Reset Done
+# [JTAG]   33301ns - Bypass Test Passed
+# [JTAG]   43701ns - Tap ID: 50001db3
+# [JTAG]   43701ns - Tap ID Test PASSED
+# [TIF ]   50301ns - Init
+# [TB  ]   50301ns - Enabling clock out via jtag
+# [TB  ]   50301ns - jtag_conf_reg set to xxx
+# [TB  ]   50301ns - Releasing hard reset
+# [CORE_TRACER 992] Output filename is: trace_core_000003e0.log
+# [TB  ]   51901ns - Init PULP TAP
+# [PULP]   66001ns - WRITE32 burst @1c008080 for           4 bytes.
+# [TB  ]   66001ns - Write32 PULP TAP
+# [JTAG]  130501ns - R/W test of L2 succeeded
+# [TB  ]  176201ns - Halting the Core
+# [TB  ]  235001ns - Writing the boot address into dpc
+# [TB  ]  279101ns - Loading L2 via JTAG
+# [JTAG]  279101ns - Loading L2 with pulp tap jtag interface
+# [PULP] 1110801ns - WRITE32 burst @1c000000 for        1024 bytes.
+# [PULP] 1940901ns - WRITE32 burst @1c000400 for        1024 bytes.
+# [PULP] 2771001ns - WRITE32 burst @1c000800 for        1024 bytes.
+# [PULP] 3601101ns - WRITE32 burst @1c000c00 for        1024 bytes.
+# [PULP] 4431201ns - WRITE32 burst @1c001000 for        1024 bytes.
+# [PULP] 5261301ns - WRITE32 burst @1c001400 for        1024 bytes.
+# [PULP] 6091401ns - WRITE32 burst @1c001800 for        1024 bytes.
+# [PULP] 6921501ns - WRITE32 burst @1c001c00 for        1024 bytes.
+# [PULP] 7751601ns - WRITE32 burst @1c002000 for        1024 bytes.
+# [PULP] 8581701ns - WRITE32 burst @1c002400 for        1024 bytes.
+# [PULP] 9411801ns - WRITE32 burst @1c002800 for        1024 bytes.
+# [PULP] 10241901ns - WRITE32 burst @1c002c00 for        1024 bytes.
+# [PULP] 11072001ns - WRITE32 burst @1c003000 for        1024 bytes.
+# [PULP] 11902101ns - WRITE32 burst @1c003400 for        1024 bytes.
+# [PULP] 12732201ns - WRITE32 burst @1c003800 for        1024 bytes.
+# [PULP] 13562301ns - WRITE32 burst @1c003c00 for        1024 bytes.
+# [PULP] 14392401ns - WRITE32 burst @1c004000 for        1024 bytes.
+# [PULP] 15222501ns - WRITE32 burst @1c004400 for        1024 bytes.
+# [PULP] 16052601ns - WRITE32 burst @1c004800 for        1024 bytes.
+# [PULP] 16882701ns - WRITE32 burst @1c004c00 for        1024 bytes.
+# [PULP] 17712801ns - WRITE32 burst @1c005000 for        1024 bytes.
+# [PULP] 18542901ns - WRITE32 burst @1c005400 for        1024 bytes.
+# [PULP] 19373001ns - WRITE32 burst @1c005800 for        1024 bytes.
+# [PULP] 20203101ns - WRITE32 burst @1c005c00 for        1024 bytes.
+# [PULP] 20642801ns - WRITE32 burst @1c006000 for         536 bytes.
+# [PULP] 21472901ns - WRITE32 burst @1c008000 for        1024 bytes.
+# [PULP] 22303001ns - WRITE32 burst @1c008400 for        1024 bytes.
+# [PULP] 23133101ns - WRITE32 burst @1c008800 for        1024 bytes.
+# [PULP] 23963201ns - WRITE32 burst @1c008c00 for        1024 bytes.
+# [PULP] 24793301ns - WRITE32 burst @1c009000 for        1024 bytes.
+# [PULP] 25623401ns - WRITE32 burst @1c009400 for        1024 bytes.
+# [PULP] 26453501ns - WRITE32 burst @1c009800 for        1024 bytes.
+# [PULP] 27040401ns - WRITE32 burst @1c009c00 for         720 bytes.
+# [TB  ] 27042001ns - Resuming the CORE
+# [TB  ] 27100801ns - retrying debug reg access
+# [TB  ] 27130101ns - retrying debug reg access
+# [TB  ] 27159401ns - retrying debug reg access
+# [TB  ] 27188701ns - retrying debug reg access
+# [TB  ] 27218001ns - retrying debug reg access
+# [TB  ] 27247301ns - retrying debug reg access
+# [TB  ] 27276601ns - retrying debug reg access
+# [TB  ] 27305901ns - retrying debug reg access
+# [TB  ] 27335201ns - retrying debug reg access
+# [TB  ] 27364501ns - retrying debug reg access
+# [TB  ] 27393801ns - retrying debug reg access
+# [TB  ] 27423101ns - retrying debug reg access
+# [TB  ] 27452401ns - retrying debug reg access
+# [TB  ] 27481701ns - retrying debug reg access
+# [TB  ] 27511001ns - retrying debug reg access
+# [TB  ] 27540301ns - retrying debug reg access
+# [TB  ] 27569601ns - retrying debug reg access
+# [TB  ] 27598901ns - retrying debug reg access
+# [TB  ] 27628201ns - retrying debug reg access
+# [TB  ] 27657501ns - retrying debug reg access
+# [TB  ] 27686801ns - retrying debug reg access
+# [TB  ] 27716101ns - retrying debug reg access
+# [TB  ] 27745401ns - retrying debug reg access
+# [TB  ] 27774701ns - retrying debug reg access
+# [TB  ] 27804001ns - retrying debug reg access
+# [STDOUT-CL31_PE0] NTT starts!
+# [STDOUT-CL31_PE0] Getnoise executed!
+# [TB  ] 28362701ns - Waiting for end of computation
+# [STDOUT-CL31_PE0] 0-0-0-0-0-0-0-0-0-0-0-0-0-0-0--32768-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-33-0-128-0-19696-7168-0-0-19644-7168-50-0-0-0-0-0-16320--32308-14055--30967-15195--13416-7316-1656-23128--12553-30262-6846--2619--26897--10788-23084--27160--25520--5014-13676--28625-32375--26113--11900-11717--19664--24755-2229--11863-21332-27205-19351-3574-14518-10933--31341-9798-9962-2452-9891--22960-16925--14680--30182-10041--5252--31194--12132--9355-9508-14853-24658--4883-13043--665-30953--28946--9660--4726-12044--17677--31723-23426--3129--19931--31734--16154-27160-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-128-0-19696-7168-0-0--30282-7168-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-19904-7168-16320--32308-14055--30967-15195--13416-7316-1656-23128--12553-30262-6846--2619--26897--10788-23084--27160--25520--5014-13676--28625-32375--26113--11900-11717--19664--24755-2229--11863-21332-27205-19351-3574-14518-10933--31341-9798-9962-2452-9891--22960-16925--14680--30182-10041--5252--31194--12132--9355-9508-14853-24658--4883-13043--665-30953--28946--9660--4726-12044--17677--31723-23426--3129-
+# [STDOUT-CL31_PE0] NTT accelerator starts working!
+# [STDOUT-CL31_PE0] NTT driver starts!
+# [STDOUT-CL31_PE0] set_input_ntt_intt_pwm()
+# [STDOUT-CL31_PE0] 1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-24-25-26-27-28-29-30-31-32-33-34-35-36-37-38-39-40-41-42-43-44-45-46-47-48-49-50-51-52-53-54-55-56-57-58-59-60-61-62-63-64-65-66-67-68-69-70-71-72-73-74-75-76-77-78-79-80-81-82-83-84-85-86-87-88-89-90-91-92-93-94-95-96-97-98-99-100-101-102-103-104-105-106-107-108-109-110-111-112-113-114-115-116-117-118-119-120-121-122-123-124-125-126-127-128-129-130-131-132-133-134-135-136-137-138-139-140-141-142-143-144-145-146-147-148-149-150-151-152-153-154-155-156-157-158-159-160-161-162-163-164-165-166-167-168-169-170-171-172-173-174-175-176-177-178-179-180-181-182-183-184-185-186-187-188-189-190-191-192-193-194-195-196-197-198-199-200-201-202-203-204-205-206-207-208-209-210-211-212-213-214-215-216-217-218-219-220-221-222-223-224-225-226-227-228-229-230-231-232-233-234-235-236-237-238-239-240-241-242-243-244-245-246-247-248-249-250-251-252-253-254-255-256-
+# [STDOUT-CL31_PE0] wait_for_input()
+# [STDOUT-CL31_PE0] NTT accelerator ends working!
+# [STDOUT-CL31_PE0] NTT done!
+# [TB  ] 34117701ns - Received status core: 0x00000000
+# ** Note: $stop    : /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/rtl/tb/tb_pulp.sv(776)
+#    Time: 34117701 ns  Iteration: 0  Instance: /tb_pulp
+# Break in Module tb_pulp at /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/rtl/tb/tb_pulp.sv line 776
+# End time: 12:16:45 on Jun 01,2023, Elapsed time: 0:18:46
+# Errors: 0, Warnings: 10
