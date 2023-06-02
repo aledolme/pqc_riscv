@@ -15,15 +15,11 @@
 # source /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/sim/tcl_files/config/run_and_exit.tcl
 # source /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/sim/tcl_files/run.tcl
 # vsim -c -quiet vopt_tb -t ps "+nowarnTRAN" "+nowarnTSCALE" "+nowarnTFMPC" -suppress 8386 "+UVM_NO_RELNOTES" "+ENTRY_POINT=0x1c008080" -permit_unmatched_virtual_intf -voptargs="+acc -assertdebug -bitscalars -fsmdebug -linedebug" -gBAUDRATE=115200 -gLOAD_L2=JTAG 
-# Start time: 11:06:08 on Jun 02,2023
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Warning: (vopt-13379) The use of vopt option -linedebug is deprecated. This option will be removed in future releases.
-# ** Error: (vopt-13130) Failed to find design unit vopt_tb.
-#         Searched libraries:
-#             work
-# Optimization failed
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=1.
+# Start time: 11:12:32 on Jun 02,2023
+# ** Fatal: (vsim-3362) The type of VHDL port 'din' is invalid for Verilog connection (11th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm File: /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulpissimo/.bender/git/checkouts/pulp_soc-60a5c49e91ba4c5e/rtl/ntt_intt_pwm_ip/ntt_intt_pwm.vhd Line: 16
+# FATAL ERROR while loading design
 # Error loading design
-# End time: 11:06:09 on Jun 02,2023, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 1
+# End time: 11:12:34 on Jun 02,2023, Elapsed time: 0:00:02
+# Errors: 1, Warnings: 0
 #  
