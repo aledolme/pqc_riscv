@@ -1,5 +1,8 @@
 add wave -divider NTT_INTT_PWM_BUS
-add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/s_ntt_intt_pwm_bus/*
+add wave -position insertpoint -color MediumOrchid sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/s_ntt_intt_pwm_bus/aw_addr
+add wave -position insertpoint -color MediumOrchid sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/s_ntt_intt_pwm_bus/aw_valid
+add wave -position insertpoint -color MediumOrchid sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/s_ntt_intt_pwm_bus/aw_ready
+add wave -position insertpoint -color Orchid sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/s_ntt_intt_pwm_bus/w_data 
 add wave -divider NTT_INTT_PWM_top
 add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/*
 add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/*
