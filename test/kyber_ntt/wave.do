@@ -4,7 +4,11 @@ add wave -position insertpoint -color MediumOrchid sim:/tb_pulp/i_dut/soc_domain
 add wave -position insertpoint -color MediumOrchid sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/s_ntt_intt_pwm_bus/aw_ready
 add wave -position insertpoint -color Orchid sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/s_ntt_intt_pwm_bus/w_data 
 add wave -divider NTT_INTT_PWM_top
-add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/*
+add wave -position insertpoint -color Orange sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/reg_file_to_ip
+add wave -position insertpoint -color Orange sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/ip_to_reg_file
+add wave -position insertpoint -color Orange sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/din_ntt_intt_pwm
+add wave -position insertpoint -color Orange sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/dout_ntt_intt_pwm
+
 add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/*
 add wave -divider AXI2REG
 add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_axi2reg/*
