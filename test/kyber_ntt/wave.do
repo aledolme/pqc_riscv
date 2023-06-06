@@ -6,6 +6,11 @@ add wave -position insertpoint -color MediumOrchid sim:/tb_pulp/i_dut/soc_domain
 add wave -position insertpoint -color MediumOrchid sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/s_ntt_intt_pwm_bus/aw_valid
 add wave -position insertpoint -color MediumOrchid sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/s_ntt_intt_pwm_bus/aw_ready
 add wave -position insertpoint -color Orchid sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/s_ntt_intt_pwm_bus/w_data 
+add wave -divider KECCAK_BUS
+add wave -position insertpoint -color MediumOrchid sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/s_keccak_bus/aw_addr
+add wave -position insertpoint -color MediumOrchid sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/s_keccak_bus/aw_valid
+add wave -position insertpoint -color MediumOrchid sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/s_keccak_bus/aw_ready
+add wave -position insertpoint -color Orchid sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/s_keccak_bus/w_data
 add wave -divider NTT_INTT_PWM_top
 add wave -position insertpoint -color Orange sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/reg_file_to_ip
 add wave -position insertpoint -color Orange sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/ip_to_reg_file
@@ -19,7 +24,7 @@ add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_
 add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/read_a
 add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/read_b
 add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/start_ab
-add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/start_fntt
+add wave -position insertpoint -color Cyan sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/start_fntt
 add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/start_intt
 add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/start_pwm2
 add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/y
@@ -31,6 +36,7 @@ add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_
 
 add wave -divider KECCAK
 add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_keccak_top/*
+add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_keccak_top/i_keccak/*
 
 add wave -divider AXI2REG
 add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_axi2reg/*
