@@ -49,23 +49,24 @@
  /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/data/alloc.h \
  /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/keccak/keccak_auto.h \
  /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/keccak/keccak_driver.h \
- /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/api.h \
- /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/cbd.h \
- /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/params.h \
- /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/poly.h \
- /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/fips202.h \
- /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/indcpa.h \
- /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/polyvec.h \
- /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/kem.h \
- /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/ntt.h \
- /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/params.h \
- /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/poly.h \
- /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/polyvec.h \
- /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/randombytes.h \
- /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/reduce.h \
- /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/symmetric.h \
- /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/fips202.h \
- /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/verify.h \
+ /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_intt_pwm/ntt_intt_pwm_auto.h \
+ /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_intt_pwm/ntt_intt_pwm_driver.h \
+ /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/api.h \
+ /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/cbd.h \
+ /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/params.h \
+ /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/poly.h \
+ /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/fips202.h \
+ /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/indcpa.h \
+ /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/polyvec.h \
+ /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/kem.h \
+ /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/params.h \
+ /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/poly.h \
+ /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/polyvec.h \
+ /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/randombytes.h \
+ /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/reduce.h \
+ /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/symmetric.h \
+ /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/fips202.h \
+ /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/verify.h \
  /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/implem/implem.h \
  /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/implem/alloc.h \
  /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/implem/irq.h \
@@ -174,39 +175,41 @@
 
 /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/keccak/keccak_driver.h:
 
-/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/api.h:
+/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_intt_pwm/ntt_intt_pwm_auto.h:
 
-/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/cbd.h:
+/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_intt_pwm/ntt_intt_pwm_driver.h:
 
-/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/params.h:
+/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/api.h:
 
-/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/poly.h:
+/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/cbd.h:
 
-/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/fips202.h:
+/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/params.h:
 
-/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/indcpa.h:
+/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/poly.h:
 
-/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/polyvec.h:
+/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/fips202.h:
 
-/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/kem.h:
+/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/indcpa.h:
 
-/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/ntt.h:
+/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/polyvec.h:
 
-/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/params.h:
+/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/kem.h:
 
-/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/poly.h:
+/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/params.h:
 
-/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/polyvec.h:
+/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/poly.h:
 
-/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/randombytes.h:
+/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/polyvec.h:
 
-/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/reduce.h:
+/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/randombytes.h:
 
-/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/symmetric.h:
+/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/reduce.h:
 
-/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/fips202.h:
+/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/symmetric.h:
 
-/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/kyber1024/verify.h:
+/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/fips202.h:
+
+/home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/ntt_test/verify.h:
 
 /home/phd-students/alessandra.dolmeta/Desktop/pqc_riscv/pulp-runtime/include/implem/implem.h:
 
