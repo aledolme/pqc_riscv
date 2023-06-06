@@ -15,11 +15,11 @@
 # source /home/alessandra.dolmeta/pqc_riscv/pulpissimo/sim/tcl_files/config/run_and_exit.tcl
 # source /home/alessandra.dolmeta/pqc_riscv/pulpissimo/sim/tcl_files/run.tcl
 # vsim -c -quiet vopt_tb -t ps "+nowarnTRAN" "+nowarnTSCALE" "+nowarnTFMPC" -suppress 8386 "+UVM_NO_RELNOTES" "+ENTRY_POINT=0x1c008080" -permit_unmatched_virtual_intf -voptargs="+acc -assertdebug -bitscalars -fsmdebug -linedebug" -gBAUDRATE=115200 -gLOAD_L2=JTAG 
-# Start time: 14:08:51 on Jun 06,2023
+# Start time: 14:12:18 on Jun 06,2023
 # ** Fatal: (vsim-3363) The array length (1) of VHDL port 'done' does not match the width (2) of its Verilog connection (13th connection).
 #    Time: 0 ps  Iteration: 0  Instance: /tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm File: /home/alessandra.dolmeta/pqc_riscv/pulpissimo/.bender/git/checkouts/pulp_soc-acf34cd9f4d1491b/rtl/ntt_intt_pwm_ip/ntt_intt_pwm_top.sv Line: 83
 # FATAL ERROR while loading design
 # Error loading design
-# End time: 14:08:53 on Jun 06,2023, Elapsed time: 0:00:02
+# End time: 14:12:20 on Jun 06,2023, Elapsed time: 0:00:02
 # Errors: 1, Warnings: 0
 #  
