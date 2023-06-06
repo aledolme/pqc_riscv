@@ -1,7 +1,7 @@
 #!/bin/bash
 
-cd pqc_riscv/pulp_soc
-rm -rf ./bender
+cd ./pulp_soc
+rm -rf .bender
 rm Bender.lock
 ./bender update
 git add .
