@@ -34,6 +34,7 @@ add wave -position insertpoint -color Cyan sim:/tb_pulp/i_dut/soc_domain_i/pulp_
 add wave -position insertpoint -color Violet sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/dout
 
 add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/b_ram0_0/ram
+add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/b_ram0_1/ram
 
 add wave -divider KECCAK
 add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_keccak_top/*

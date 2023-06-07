@@ -15,7 +15,9 @@
 # source /home/alessandra.dolmeta/pqc_riscv/pulpissimo/sim/tcl_files/config/run_and_exit.tcl
 # source /home/alessandra.dolmeta/pqc_riscv/pulpissimo/sim/tcl_files/run.tcl
 # vsim -c -quiet vopt_tb -t ps "+nowarnTRAN" "+nowarnTSCALE" "+nowarnTFMPC" -suppress 8386 "+UVM_NO_RELNOTES" "+ENTRY_POINT=0x1c008080" -permit_unmatched_virtual_intf -voptargs="+acc -assertdebug -bitscalars -fsmdebug -linedebug" -gBAUDRATE=115200 -gLOAD_L2=JTAG 
-# Start time: 09:43:59 on Jun 07,2023
+# Start time: 09:58:56 on Jun 07,2023
+# ** Warning: (vsim-3473) Component instance "load_reg : reg_N_level_rst_n" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm File: /home/alessandra.dolmeta/pqc_riscv/pulpissimo/.bender/git/checkouts/pulp_soc-acf34cd9f4d1491b/rtl/ntt_intt_pwm_ip/ntt_intt_pwm.vhd
 # ** Warning: (vsim-3770) Failed to find user specified function 'jtag_tick' in DPI precompiled library search list "/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so ".
 #    Time: 0 ps  Iteration: 0  Region: /SimJTAG_sv_unit File: /home/alessandra.dolmeta/pqc_riscv/pulpissimo/rtl/tb/SimJTAG.sv
 # ** Warning: (vsim-8683) Uninitialized out port /tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_clk_rst_gen/i_fll_soc/i_FLL_digital/TQ has no driver.
@@ -32,6 +34,7 @@
 # This port will contribute value (U) to the signal network.
 # ** Warning: (vsim-3040) Command line generic/parameter "LOAD_L2" not found in design.
 #  
+add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/b_ram0_0/*
 do ../wave.do
 # /tb_pulp/i_dut/soc_domain_i/pulp_soc_i/fc_subsystem_i/FC_CORE/FC_CORE_i
 # ----------------------------------------------------------------
@@ -138,6 +141,6 @@ do ../wave.do
 # [STDOUT-CL31_PE0] 0000fffe-00000002-fffefffe-0001ffff-0001ffff-00000002-00000000-0001ffff-00010000-00010002-ffff0000-0001fffe-ffff0000-fffe0001-ffff0001-00000000-ffff0000-00000000-00010000-fffffffe-00000002-00000001-ffff0001-00000001-0000fffe-00000000-0000ffff-00000000-fffeffff-0000ffff-fffe0001-00000000-ffffffff-00000000-00000000-fffe0000-00000000-fffeffff-fffe0000-00000002-00000001-00000000-00010001-ffff0001-00000000-00000000-ffffffff-0001ffff-0000fffe-ffff0001-00000002-00020001-ffffffff-00000000-00000001-ffff0000-00000000-0001ffff-ffff0000-00020000-0000ffff-00000000-00010000-0001ffff-00000000-ffff0000-00000001-ffff0002-00000001-00000001-00020000-0000ffff-0000ffff-00000001-0000ffff-00000001-ffff0000-00000000-00020000-00000001-00000000-00000000-ffff0001-0001ffff-ffff0000-0000fffe-00000001-0000ffff-00000002-00010001-fffe0001-0001ffff-00000001-0000ffff-fffe0000-0000ffff-00000001-0001ffff-ffff0001-00000001-00000000-00000002-00010000-00000000-ffffffff-fffeffff-00020000-00010002-00010000-ffff0000-0000ffff-ffff0001-ffffffff-ffffffff-ffffffff-0000ffff-0000ffff-ffffffff-fffe0000-00000001-00020000-00000001-00000001-ffffffff-0001ffff-00010000-0001fffe-00020000-
 # [STDOUT-CL31_PE0] NTT accelerator starts working!
 # Break key hit
-# Simulation stop requested.
-# End time: 09:50:02 on Jun 07,2023, Elapsed time: 0:06:03
-# Errors: 0, Warnings: 10
+# Break in Module soc_interconnect at /home/alessandra.dolmeta/pqc_riscv/pulpissimo/.bender/git/checkouts/pulp_soc-acf34cd9f4d1491b/rtl/pulp_soc/soc_interconnect.sv line 95
+# End time: 10:06:50 on Jun 07,2023, Elapsed time: 0:07:54
+# Errors: 0, Warnings: 11
