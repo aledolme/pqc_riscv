@@ -15,9 +15,7 @@
 # source /home/alessandra.dolmeta/pqc_riscv/pulpissimo/sim/tcl_files/config/run_and_exit.tcl
 # source /home/alessandra.dolmeta/pqc_riscv/pulpissimo/sim/tcl_files/run.tcl
 # vsim -c -quiet vopt_tb -t ps "+nowarnTRAN" "+nowarnTSCALE" "+nowarnTFMPC" -suppress 8386 "+UVM_NO_RELNOTES" "+ENTRY_POINT=0x1c008080" -permit_unmatched_virtual_intf -voptargs="+acc -assertdebug -bitscalars -fsmdebug -linedebug" -gBAUDRATE=115200 -gLOAD_L2=JTAG 
-# Start time: 09:58:56 on Jun 07,2023
-# ** Warning: (vsim-3473) Component instance "load_reg : reg_N_level_rst_n" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm File: /home/alessandra.dolmeta/pqc_riscv/pulpissimo/.bender/git/checkouts/pulp_soc-acf34cd9f4d1491b/rtl/ntt_intt_pwm_ip/ntt_intt_pwm.vhd
+# Start time: 08:24:05 on Jun 08,2023
 # ** Warning: (vsim-3770) Failed to find user specified function 'jtag_tick' in DPI precompiled library search list "/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so ".
 #    Time: 0 ps  Iteration: 0  Region: /SimJTAG_sv_unit File: /home/alessandra.dolmeta/pqc_riscv/pulpissimo/rtl/tb/SimJTAG.sv
 # ** Warning: (vsim-8683) Uninitialized out port /tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_clk_rst_gen/i_fll_soc/i_FLL_digital/TQ has no driver.
@@ -34,7 +32,6 @@
 # This port will contribute value (U) to the signal network.
 # ** Warning: (vsim-3040) Command line generic/parameter "LOAD_L2" not found in design.
 #  
-add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/b_ram0_0/*
 do ../wave.do
 # /tb_pulp/i_dut/soc_domain_i/pulp_soc_i/fc_subsystem_i/FC_CORE/FC_CORE_i
 # ----------------------------------------------------------------
@@ -99,48 +96,179 @@ do ../wave.do
 # [PULP] 18542901ns - WRITE32 burst @1c005400 for        1024 bytes.
 # [PULP] 19373001ns - WRITE32 burst @1c005800 for        1024 bytes.
 # [PULP] 20203101ns - WRITE32 burst @1c005c00 for        1024 bytes.
-# [PULP] 20681201ns - WRITE32 burst @1c006000 for         584 bytes.
-# [PULP] 21511301ns - WRITE32 burst @1c008000 for        1024 bytes.
-# [PULP] 22341401ns - WRITE32 burst @1c008400 for        1024 bytes.
-# [PULP] 23171501ns - WRITE32 burst @1c008800 for        1024 bytes.
-# [PULP] 24001601ns - WRITE32 burst @1c008c00 for        1024 bytes.
-# [PULP] 24831701ns - WRITE32 burst @1c009000 for        1024 bytes.
-# [PULP] 25661801ns - WRITE32 burst @1c009400 for        1024 bytes.
-# [PULP] 26491901ns - WRITE32 burst @1c009800 for        1024 bytes.
-# [PULP] 27162001ns - WRITE32 burst @1c009c00 for         824 bytes.
-# [TB  ] 27163601ns - Resuming the CORE
-# [TB  ] 27207701ns - retrying debug reg access
-# [TB  ] 27237001ns - retrying debug reg access
-# [TB  ] 27266301ns - retrying debug reg access
-# [TB  ] 27295601ns - retrying debug reg access
-# [TB  ] 27324901ns - retrying debug reg access
-# [TB  ] 27354201ns - retrying debug reg access
-# [TB  ] 27383501ns - retrying debug reg access
-# [TB  ] 27412801ns - retrying debug reg access
-# [TB  ] 27442101ns - retrying debug reg access
-# [TB  ] 27471401ns - retrying debug reg access
-# [TB  ] 27500701ns - retrying debug reg access
-# [TB  ] 27530001ns - retrying debug reg access
-# [TB  ] 27559301ns - retrying debug reg access
-# [TB  ] 27588601ns - retrying debug reg access
-# [TB  ] 27617901ns - retrying debug reg access
-# [TB  ] 27647201ns - retrying debug reg access
-# [TB  ] 27676501ns - retrying debug reg access
-# [TB  ] 27705801ns - retrying debug reg access
-# [TB  ] 27735101ns - retrying debug reg access
-# [TB  ] 27764401ns - retrying debug reg access
-# [TB  ] 27793701ns - retrying debug reg access
-# [TB  ] 27823001ns - retrying debug reg access
-# [TB  ] 27852301ns - retrying debug reg access
-# [TB  ] 27881601ns - retrying debug reg access
-# [TB  ] 27910901ns - retrying debug reg access
-# [TB  ] 27940201ns - retrying debug reg access
+# [PULP] 20591601ns - WRITE32 burst @1c006000 for         472 bytes.
+# [PULP] 21421701ns - WRITE32 burst @1c008000 for        1024 bytes.
+# [PULP] 22251801ns - WRITE32 burst @1c008400 for        1024 bytes.
+# [PULP] 23081901ns - WRITE32 burst @1c008800 for        1024 bytes.
+# [PULP] 23912001ns - WRITE32 burst @1c008c00 for        1024 bytes.
+# [PULP] 24742101ns - WRITE32 burst @1c009000 for        1024 bytes.
+# [PULP] 25572201ns - WRITE32 burst @1c009400 for        1024 bytes.
+# [PULP] 26402301ns - WRITE32 burst @1c009800 for        1024 bytes.
+# [PULP] 27104401ns - WRITE32 burst @1c009c00 for         864 bytes.
+# [TB  ] 27106001ns - Resuming the CORE
+# [TB  ] 27164801ns - retrying debug reg access
+# [TB  ] 27194101ns - retrying debug reg access
+# [TB  ] 27223401ns - retrying debug reg access
+# [TB  ] 27252701ns - retrying debug reg access
+# [TB  ] 27282001ns - retrying debug reg access
+# [TB  ] 27311301ns - retrying debug reg access
+# [TB  ] 27340601ns - retrying debug reg access
+# [TB  ] 27369901ns - retrying debug reg access
+# [TB  ] 27399201ns - retrying debug reg access
+# [TB  ] 27428501ns - retrying debug reg access
+# [TB  ] 27457801ns - retrying debug reg access
+# [TB  ] 27487101ns - retrying debug reg access
+# [TB  ] 27516401ns - retrying debug reg access
+# [TB  ] 27545701ns - retrying debug reg access
+# [TB  ] 27575001ns - retrying debug reg access
+# [TB  ] 27604301ns - retrying debug reg access
+# [TB  ] 27633601ns - retrying debug reg access
+# [TB  ] 27662901ns - retrying debug reg access
+# [TB  ] 27692201ns - retrying debug reg access
+# [TB  ] 27721501ns - retrying debug reg access
+# [TB  ] 27750801ns - retrying debug reg access
+# [TB  ] 27780101ns - retrying debug reg access
+# [TB  ] 27809401ns - retrying debug reg access
+# [TB  ] 27838701ns - retrying debug reg access
+# [TB  ] 27868001ns - retrying debug reg access
 # [STDOUT-CL31_PE0] NTT starts!
 # [STDOUT-CL31_PE0] Getnoise executed!
-# [TB  ] 28513601ns - Waiting for end of computation
+# [TB  ] 28426701ns - Waiting for end of computation
 # [STDOUT-CL31_PE0] 0000fffe-00000002-fffefffe-0001ffff-0001ffff-00000002-00000000-0001ffff-00010000-00010002-ffff0000-0001fffe-ffff0000-fffe0001-ffff0001-00000000-ffff0000-00000000-00010000-fffffffe-00000002-00000001-ffff0001-00000001-0000fffe-00000000-0000ffff-00000000-fffeffff-0000ffff-fffe0001-00000000-ffffffff-00000000-00000000-fffe0000-00000000-fffeffff-fffe0000-00000002-00000001-00000000-00010001-ffff0001-00000000-00000000-ffffffff-0001ffff-0000fffe-ffff0001-00000002-00020001-ffffffff-00000000-00000001-ffff0000-00000000-0001ffff-ffff0000-00020000-0000ffff-00000000-00010000-0001ffff-00000000-ffff0000-00000001-ffff0002-00000001-00000001-00020000-0000ffff-0000ffff-00000001-0000ffff-00000001-ffff0000-00000000-00020000-00000001-00000000-00000000-ffff0001-0001ffff-ffff0000-0000fffe-00000001-0000ffff-00000002-00010001-fffe0001-0001ffff-00000001-0000ffff-fffe0000-0000ffff-00000001-0001ffff-ffff0001-00000001-00000000-00000002-00010000-00000000-ffffffff-fffeffff-00020000-00010002-00010000-ffff0000-0000ffff-ffff0001-ffffffff-ffffffff-ffffffff-0000ffff-0000ffff-ffffffff-fffe0000-00000001-00020000-00000001-00000001-ffffffff-0001ffff-00010000-0001fffe-00020000-
 # [STDOUT-CL31_PE0] NTT accelerator starts working!
-# Break key hit
-# Break in Module soc_interconnect at /home/alessandra.dolmeta/pqc_riscv/pulpissimo/.bender/git/checkouts/pulp_soc-acf34cd9f4d1491b/rtl/pulp_soc/soc_interconnect.sv line 95
-# End time: 10:06:50 on Jun 07,2023, Elapsed time: 0:07:54
-# Errors: 0, Warnings: 11
+# [STDOUT-CL31_PE0] 04da0026-02f800db-0191fd4a-02c80000-0210fcc3-fb8a04a4-02dff986-fd2afe78-fcbc04ce-fc3d03d5-05870430-05a2fe84-fdad060b-0442fb1a-fa7bff77-fa93fcb5-fccffbdd-005e048b-fb0bfbb8-01c2faf6-f9b500b0-0127f9a9-0270fea6-fcebfa0e-054d0607-00a9033f-ff2bfcab-fe1bffb9-fba904c8-fe5dfbdf-fa6efbdd-faa1fea5-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-
+# [STDOUT-CL31_PE0] NTT accelerator ends working!
+# [STDOUT-CL31_PE0] 04da0026-02f800db-0191fd4a-02c80000-0210fcc3-fb8a04a4-02dff986-fd2afe78-fcbc04ce-fc3d03d5-05870430-05a2fe84-fdad060b-0442fb1a-fa7bff77-fa93fcb5-fccffbdd-005e048b-fb0bfbb8-01c2faf6-f9b500b0-0127f9a9-0270fea6-fcebfa0e-054d0607-00a9033f-ff2bfcab-fe1bffb9-fba904c8-fe5dfbdf-fa6efbdd-faa1fea5-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-NTT done!
+# [TB  ] 33928801ns - Received status core: 0x00000000
+# ** Note: $stop    : /home/alessandra.dolmeta/pqc_riscv/pulpissimo/rtl/tb/tb_pulp.sv(776)
+#    Time: 33928801 ns  Iteration: 0  Instance: /tb_pulp
+# Break in Module tb_pulp at /home/alessandra.dolmeta/pqc_riscv/pulpissimo/rtl/tb/tb_pulp.sv line 776
+add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/*
+restart
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3770) Failed to find user specified function 'jtag_tick' in DPI precompiled library search list "/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so ".
+#    Time: 0 ps  Iteration: 0  Region: /SimJTAG_sv_unit File: /home/alessandra.dolmeta/pqc_riscv/pulpissimo/rtl/tb/SimJTAG.sv
+# ** Warning: (vsim-8683) Uninitialized out port /tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_clk_rst_gen/i_fll_soc/i_FLL_digital/TQ has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_clk_rst_gen/i_fll_soc/i_FLL_digital/JTQ has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_clk_rst_gen/i_fll_per/i_FLL_digital/TQ has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_clk_rst_gen/i_fll_per/i_FLL_digital/JTQ has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_clk_rst_gen/i_fll_cluster/i_FLL_digital/TQ has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_clk_rst_gen/i_fll_cluster/i_FLL_digital/JTQ has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-3040) Command line generic/parameter "LOAD_L2" not found in design.
+run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# ** Warning: (vsim-7) Failed to open readmem file "/../rtl/vip/camera/img/frame0.img" in read mode.
+# No such file or directory. (errno = ENOENT)    : /home/alessandra.dolmeta/pqc_riscv/pulpissimo/rtl/vip/camera/cam_vip.sv(88)
+#    Time: 0 ps  Iteration: 0  Instance: /tb_pulp/genblk2/i_cam_vip
+# ** Warning: (vsim-7) Failed to open readmem file "/../rtl/vip/camera/img/frame1.img" in read mode.
+# No such file or directory. (errno = ENOENT)    : /home/alessandra.dolmeta/pqc_riscv/pulpissimo/rtl/vip/camera/cam_vip.sv(89)
+#    Time: 0 ps  Iteration: 0  Instance: /tb_pulp/genblk2/i_cam_vip
+# [cv32e40p_core]: PULP_XPULP =           1, PULP_CLUSTER =           0, FPU           1, PULP_ZFINX           0, NUM_MHPMCOUNTERS           1
+# [TB  ]       0ns - Asserting hard reset
+# [TB  ]       1ns - Using FLL
+# [TB  ]       1ns - Not using CAM SDVT
+# [TB  ]       1ns - Loading default stimuli
+# [TB  ]       1ns - Entry point is set to 0x1c008080
+# [JTAG]     701ns - Soft Reset Done
+# [JTAG]   33301ns - Bypass Test Passed
+# [JTAG]   43701ns - Tap ID: 50001db3
+# [JTAG]   43701ns - Tap ID Test PASSED
+# [TIF ]   50301ns - Init
+# [TB  ]   50301ns - Enabling clock out via jtag
+# [TB  ]   50301ns - jtag_conf_reg set to xxx
+# [TB  ]   50301ns - Releasing hard reset
+# [CORE_TRACER 992] Output filename is: trace_core_000003e0.log
+# [TB  ]   51901ns - Init PULP TAP
+# [PULP]   66001ns - WRITE32 burst @1c008080 for           4 bytes.
+# [TB  ]   66001ns - Write32 PULP TAP
+# [JTAG]  130501ns - R/W test of L2 succeeded
+# [TB  ]  176201ns - Halting the Core
+# [TB  ]  235001ns - Writing the boot address into dpc
+# [TB  ]  279101ns - Loading L2 via JTAG
+# [JTAG]  279101ns - Loading L2 with pulp tap jtag interface
+# [PULP] 1110801ns - WRITE32 burst @1c000000 for        1024 bytes.
+# [PULP] 1940901ns - WRITE32 burst @1c000400 for        1024 bytes.
+# [PULP] 2771001ns - WRITE32 burst @1c000800 for        1024 bytes.
+# [PULP] 3601101ns - WRITE32 burst @1c000c00 for        1024 bytes.
+# [PULP] 4431201ns - WRITE32 burst @1c001000 for        1024 bytes.
+# [PULP] 5261301ns - WRITE32 burst @1c001400 for        1024 bytes.
+# [PULP] 6091401ns - WRITE32 burst @1c001800 for        1024 bytes.
+# [PULP] 6921501ns - WRITE32 burst @1c001c00 for        1024 bytes.
+# [PULP] 7751601ns - WRITE32 burst @1c002000 for        1024 bytes.
+# [PULP] 8581701ns - WRITE32 burst @1c002400 for        1024 bytes.
+# [PULP] 9411801ns - WRITE32 burst @1c002800 for        1024 bytes.
+# [PULP] 10241901ns - WRITE32 burst @1c002c00 for        1024 bytes.
+# [PULP] 11072001ns - WRITE32 burst @1c003000 for        1024 bytes.
+# [PULP] 11902101ns - WRITE32 burst @1c003400 for        1024 bytes.
+# [PULP] 12732201ns - WRITE32 burst @1c003800 for        1024 bytes.
+# [PULP] 13562301ns - WRITE32 burst @1c003c00 for        1024 bytes.
+# [PULP] 14392401ns - WRITE32 burst @1c004000 for        1024 bytes.
+# [PULP] 15222501ns - WRITE32 burst @1c004400 for        1024 bytes.
+# [PULP] 16052601ns - WRITE32 burst @1c004800 for        1024 bytes.
+# [PULP] 16882701ns - WRITE32 burst @1c004c00 for        1024 bytes.
+# [PULP] 17712801ns - WRITE32 burst @1c005000 for        1024 bytes.
+# [PULP] 18542901ns - WRITE32 burst @1c005400 for        1024 bytes.
+# [PULP] 19373001ns - WRITE32 burst @1c005800 for        1024 bytes.
+# [PULP] 20203101ns - WRITE32 burst @1c005c00 for        1024 bytes.
+# [PULP] 20591601ns - WRITE32 burst @1c006000 for         472 bytes.
+# [PULP] 21421701ns - WRITE32 burst @1c008000 for        1024 bytes.
+# [PULP] 22251801ns - WRITE32 burst @1c008400 for        1024 bytes.
+# [PULP] 23081901ns - WRITE32 burst @1c008800 for        1024 bytes.
+# [PULP] 23912001ns - WRITE32 burst @1c008c00 for        1024 bytes.
+# [PULP] 24742101ns - WRITE32 burst @1c009000 for        1024 bytes.
+# [PULP] 25572201ns - WRITE32 burst @1c009400 for        1024 bytes.
+# [PULP] 26402301ns - WRITE32 burst @1c009800 for        1024 bytes.
+# [PULP] 27104401ns - WRITE32 burst @1c009c00 for         864 bytes.
+# [TB  ] 27106001ns - Resuming the CORE
+# [TB  ] 27164801ns - retrying debug reg access
+# [TB  ] 27194101ns - retrying debug reg access
+# [TB  ] 27223401ns - retrying debug reg access
+# [TB  ] 27252701ns - retrying debug reg access
+# [TB  ] 27282001ns - retrying debug reg access
+# [TB  ] 27311301ns - retrying debug reg access
+# [TB  ] 27340601ns - retrying debug reg access
+# [TB  ] 27369901ns - retrying debug reg access
+# [TB  ] 27399201ns - retrying debug reg access
+# [TB  ] 27428501ns - retrying debug reg access
+# [TB  ] 27457801ns - retrying debug reg access
+# [TB  ] 27487101ns - retrying debug reg access
+# [TB  ] 27516401ns - retrying debug reg access
+# [TB  ] 27545701ns - retrying debug reg access
+# [TB  ] 27575001ns - retrying debug reg access
+# [TB  ] 27604301ns - retrying debug reg access
+# [TB  ] 27633601ns - retrying debug reg access
+# [TB  ] 27662901ns - retrying debug reg access
+# [TB  ] 27692201ns - retrying debug reg access
+# [TB  ] 27721501ns - retrying debug reg access
+# [TB  ] 27750801ns - retrying debug reg access
+# [TB  ] 27780101ns - retrying debug reg access
+# [TB  ] 27809401ns - retrying debug reg access
+# [TB  ] 27838701ns - retrying debug reg access
+# [TB  ] 27868001ns - retrying debug reg access
+# [STDOUT-CL31_PE0] NTT starts!
+# [STDOUT-CL31_PE0] Getnoise executed!
+# [TB  ] 28426701ns - Waiting for end of computation
+# [STDOUT-CL31_PE0] 0000fffe-00000002-fffefffe-0001ffff-0001ffff-00000002-00000000-0001ffff-00010000-00010002-ffff0000-0001fffe-ffff0000-fffe0001-ffff0001-00000000-ffff0000-00000000-00010000-fffffffe-00000002-00000001-ffff0001-00000001-0000fffe-00000000-0000ffff-00000000-fffeffff-0000ffff-fffe0001-00000000-ffffffff-00000000-00000000-fffe0000-00000000-fffeffff-fffe0000-00000002-00000001-00000000-00010001-ffff0001-00000000-00000000-ffffffff-0001ffff-0000fffe-ffff0001-00000002-00020001-ffffffff-00000000-00000001-ffff0000-00000000-0001ffff-ffff0000-00020000-0000ffff-00000000-00010000-0001ffff-00000000-ffff0000-00000001-ffff0002-00000001-00000001-00020000-0000ffff-0000ffff-00000001-0000ffff-00000001-ffff0000-00000000-00020000-00000001-00000000-00000000-ffff0001-0001ffff-ffff0000-0000fffe-00000001-0000ffff-00000002-00010001-fffe0001-0001ffff-00000001-0000ffff-fffe0000-0000ffff-00000001-0001ffff-ffff0001-00000001-00000000-00000002-00010000-00000000-ffffffff-fffeffff-00020000-00010002-00010000-ffff0000-0000ffff-ffff0001-ffffffff-ffffffff-ffffffff-0000ffff-0000ffff-ffffffff-fffe0000-00000001-00020000-00000001-00000001-ffffffff-0001ffff-00010000-0001fffe-00020000-
+# [STDOUT-CL31_PE0] NTT accelerator starts working!
+# [STDOUT-CL31_PE0] 04da0026-02f800db-0191fd4a-02c80000-0210fcc3-fb8a04a4-02dff986-fd2afe78-fcbc04ce-fc3d03d5-05870430-05a2fe84-fdad060b-0442fb1a-fa7bff77-fa93fcb5-fccffbdd-005e048b-fb0bfbb8-01c2faf6-f9b500b0-0127f9a9-0270fea6-fcebfa0e-054d0607-00a9033f-ff2bfcab-fe1bffb9-fba904c8-fe5dfbdf-fa6efbdd-faa1fea5-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-
+# [STDOUT-CL31_PE0] NTT accelerator ends working!
+# [STDOUT-CL31_PE0] 04da0026-02f800db-0191fd4a-02c80000-0210fcc3-fb8a04a4-02dff986-fd2afe78-fcbc04ce-fc3d03d5-05870430-05a2fe84-fdad060b-0442fb1a-fa7bff77-fa93fcb5-fccffbdd-005e048b-fb0bfbb8-01c2faf6-f9b500b0-0127f9a9-0270fea6-fcebfa0e-054d0607-00a9033f-ff2bfcab-fe1bffb9-fba904c8-fe5dfbdf-fa6efbdd-faa1fea5-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-00000000-NTT done!
+# [TB  ] 33928801ns - Received status core: 0x00000000
+# ** Note: $stop    : /home/alessandra.dolmeta/pqc_riscv/pulpissimo/rtl/tb/tb_pulp.sv(776)
+#    Time: 33928801 ns  Iteration: 0  Instance: /tb_pulp
+# Break in Module tb_pulp at /home/alessandra.dolmeta/pqc_riscv/pulpissimo/rtl/tb/tb_pulp.sv line 776
