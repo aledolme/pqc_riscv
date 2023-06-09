@@ -40,10 +40,20 @@ add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_
 
 add wave -position insertpoint -color Cyan sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/din
 add wave -position insertpoint -color Violet sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/dout
-
-add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/b_ram0_0/ram
-add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/b_ram0_1/ram
-
+add wave -divider NTT_RAM00
+add wave -position insertpoint -radix hex -color Violet sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/b_ram0_0/ram
+add wave -position insertpoint -radix unsigned -color Violet sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/b_ram0_0/waddr
+add wave -position insertpoint -radix hex -color Violet sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/b_ram0_0/din
+add wave -position insertpoint -radix unsigned -color Cyan sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/b_ram0_0/raddr
+add wave -position insertpoint -radix hex -color Cyan sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/b_ram0_0/dout
+add wave -divider NTT_RAM01
+add wave -position insertpoint -radix hex -color Violet sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/b_ram0_1/ram
+add wave -position insertpoint -radix unsigned -color Violet sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/b_ram0_1/waddr
+add wave -position insertpoint -radix hex -color Violet sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/b_ram0_1/din
+add wave -position insertpoint -radix unsigned -color Cyan sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/b_ram0_1/raddr
+add wave -position insertpoint -radix hex -color Cyan sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/b_ram0_1/dout
+add wave -divider
+add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_ntt_intt_pwm_top/i_ntt_intt_pwm/*
 add wave -divider KECCAK
 add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_keccak_top/*
 add wave -position insertpoint sim:/tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_keccak_top/i_keccak/*
