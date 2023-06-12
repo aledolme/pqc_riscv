@@ -2619,7 +2619,7 @@ Disassembly of section .text:
 1c009f34:	029000ef          	jal	ra,1c00a75c <printf>
 1c009f38:	8d0a                	mv	s10,sp
 1c009f3a:	000d2583          	lw	a1,0(s10) # ff0000 <__CTOR_LIST__-0x1b010004>
-1c009f3e:	2ec40513          	addi	a0,s0,748 # 1c0002ec <PQCLEAN_KYBER768_CLEAN_zetas+0x120>
+1c009f3e:	2e840513          	addi	a0,s0,744 # 1c0002e8 <PQCLEAN_KYBER768_CLEAN_zetas+0x11c>
 1c009f42:	0d11                	addi	s10,s10,4
 1c009f44:	019000ef          	jal	ra,1c00a75c <printf>
 1c009f48:	ffa919e3          	bne	s2,s10,1c009f3a <PQCLEAN_KYBER768_CLEAN_polyvec_ntt+0xb4>
@@ -2628,12 +2628,12 @@ Disassembly of section .text:
 1c009f50:	c96fe0ef          	jal	ra,1c0083e6 <KYBER_poly_ntt>
 1c009f54:	1c0007b7          	lui	a5,0x1c000
 1c009f58:	85de                	mv	a1,s7
-1c009f5a:	2f478513          	addi	a0,a5,756 # 1c0002f4 <PQCLEAN_KYBER768_CLEAN_zetas+0x128>
+1c009f5a:	2f078513          	addi	a0,a5,752 # 1c0002f0 <PQCLEAN_KYBER768_CLEAN_zetas+0x124>
 1c009f5e:	7fe000ef          	jal	ra,1c00a75c <printf>
 1c009f62:	8d4a                	mv	s10,s2
 1c009f64:	8dca                	mv	s11,s2
 1c009f66:	000da583          	lw	a1,0(s11)
-1c009f6a:	2ec40513          	addi	a0,s0,748
+1c009f6a:	2e840513          	addi	a0,s0,744
 1c009f6e:	0d91                	addi	s11,s11,4
 1c009f70:	7ec000ef          	jal	ra,1c00a75c <printf>
 1c009f74:	fe9d99e3          	bne	s11,s1,1c009f66 <PQCLEAN_KYBER768_CLEAN_polyvec_ntt+0xe0>
@@ -2651,11 +2651,11 @@ Disassembly of section .text:
 1c009f9e:	fc9d1ee3          	bne	s10,s1,1c009f7a <PQCLEAN_KYBER768_CLEAN_polyvec_ntt+0xf4>
 1c009fa2:	1c0007b7          	lui	a5,0x1c000
 1c009fa6:	85de                	mv	a1,s7
-1c009fa8:	31478513          	addi	a0,a5,788 # 1c000314 <PQCLEAN_KYBER768_CLEAN_zetas+0x148>
+1c009fa8:	31078513          	addi	a0,a5,784 # 1c000310 <PQCLEAN_KYBER768_CLEAN_zetas+0x144>
 1c009fac:	7b0000ef          	jal	ra,1c00a75c <printf>
 1c009fb0:	8d62                	mv	s10,s8
 1c009fb2:	000d1583          	lh	a1,0(s10)
-1c009fb6:	330b0513          	addi	a0,s6,816 # 1c000330 <PQCLEAN_KYBER768_CLEAN_zetas+0x164>
+1c009fb6:	32cb0513          	addi	a0,s6,812 # 1c00032c <PQCLEAN_KYBER768_CLEAN_zetas+0x160>
 1c009fba:	0d09                	addi	s10,s10,2
 1c009fbc:	7a0000ef          	jal	ra,1c00a75c <printf>
 1c009fc0:	ff3d19e3          	bne	s10,s3,1c009fb2 <PQCLEAN_KYBER768_CLEAN_polyvec_ntt+0x12c>
@@ -3430,7 +3430,7 @@ Disassembly of section .text:
 1c00a83a:	8082                	ret
 1c00a83c:	8de2                	mv	s11,s8
 1c00a83e:	000dcc03          	lbu	s8,0(s11)
-1c00a842:	338d0513          	addi	a0,s10,824 # 1c000338 <PQCLEAN_KYBER768_CLEAN_zetas+0x16c>
+1c00a842:	334d0513          	addi	a0,s10,820 # 1c000334 <PQCLEAN_KYBER768_CLEAN_zetas+0x168>
 1c00a846:	c826                	sw	s1,16(sp)
 1c00a848:	85e2                	mv	a1,s8
 1c00a84a:	c202                	sw	zero,4(sp)
@@ -3454,7 +3454,7 @@ Disassembly of section .text:
 1c00a884:	4b85                	li	s7,1
 1c00a886:	8da6                	mv	s11,s1
 1c00a888:	000dcc03          	lbu	s8,0(s11)
-1c00a88c:	338d0513          	addi	a0,s10,824
+1c00a88c:	334d0513          	addi	a0,s10,820
 1c00a890:	001d8493          	addi	s1,s11,1
 1c00a894:	85e2                	mv	a1,s8
 1c00a896:	33c5                	jal	1c00a676 <strchr>
@@ -3477,7 +3477,7 @@ Disassembly of section .text:
 1c00a8c2:	74fd8363          	beq	s11,a5,1c00b008 <pos_libc_prf+0x87e>
 1c00a8c6:	1c0007b7          	lui	a5,0x1c000
 1c00a8ca:	85ee                	mv	a1,s11
-1c00a8cc:	34078513          	addi	a0,a5,832 # 1c000340 <PQCLEAN_KYBER768_CLEAN_zetas+0x174>
+1c00a8cc:	33c78513          	addi	a0,a5,828 # 1c00033c <PQCLEAN_KYBER768_CLEAN_zetas+0x170>
 1c00a8d0:	c832                	sw	a2,16(sp)
 1c00a8d2:	3355                	jal	1c00a676 <strchr>
 1c00a8d4:	4642                	lw	a2,16(sp)
