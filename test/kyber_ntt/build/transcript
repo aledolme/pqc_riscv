@@ -1,3 +1,7 @@
+# source /home/alessandra.dolmeta/pqc_riscv/pulpissimo/sim/tcl_files/config/run_and_exit.tcl
+# source /home/alessandra.dolmeta/pqc_riscv/pulpissimo/sim/tcl_files/run.tcl
+# vsim -c -quiet vopt_tb -t ps "+nowarnTRAN" "+nowarnTSCALE" "+nowarnTFMPC" -suppress 8386 "+UVM_NO_RELNOTES" "+ENTRY_POINT=0x1c008080" -permit_unmatched_virtual_intf -gBAUDRATE=115200 -gLOAD_L2=JTAG 
+# Start time: 17:04:32 on Jun 09,2023
 # //  Questa Sim-64
 # //  Version 2020.4 linux_x86_64 Oct 13 2020
 # //
@@ -12,10 +16,6 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# source /home/alessandra.dolmeta/pqc_riscv/pulpissimo/sim/tcl_files/config/run_and_exit.tcl
-# source /home/alessandra.dolmeta/pqc_riscv/pulpissimo/sim/tcl_files/run.tcl
-# vsim -c -quiet vopt_tb -t ps "+nowarnTRAN" "+nowarnTSCALE" "+nowarnTFMPC" -suppress 8386 "+UVM_NO_RELNOTES" "+ENTRY_POINT=0x1c008080" -permit_unmatched_virtual_intf -voptargs="+acc -assertdebug -bitscalars -fsmdebug -linedebug" -gBAUDRATE=115200 -gLOAD_L2=JTAG 
-# Start time: 14:03:53 on Jun 09,2023
 # ** Warning: (vsim-3770) Failed to find user specified function 'jtag_tick' in DPI precompiled library search list "/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so ".
 #    Time: 0 ps  Iteration: 0  Region: /SimJTAG_sv_unit File: /home/alessandra.dolmeta/pqc_riscv/pulpissimo/rtl/tb/SimJTAG.sv
 # ** Warning: (vsim-8683) Uninitialized out port /tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_clk_rst_gen/i_fll_soc/i_FLL_digital/TQ has no driver.
@@ -31,9 +31,7 @@
 # ** Warning: (vsim-8683) Uninitialized out port /tb_pulp/i_dut/soc_domain_i/pulp_soc_i/i_clk_rst_gen/i_fll_cluster/i_FLL_digital/JTQ has no driver.
 # This port will contribute value (U) to the signal network.
 # ** Warning: (vsim-3040) Command line generic/parameter "LOAD_L2" not found in design.
-#  
-do ../wave.do
-# /tb_pulp/i_dut/soc_domain_i/pulp_soc_i/fc_subsystem_i/FC_CORE/FC_CORE_i
+#  run_and_exit
 # ----------------------------------------------------------------
 # UVM-1.1d
 # (C) 2007-2013 Mentor Graphics Corporation
@@ -96,52 +94,72 @@ do ../wave.do
 # [PULP] 18542901ns - WRITE32 burst @1c005400 for        1024 bytes.
 # [PULP] 19373001ns - WRITE32 burst @1c005800 for        1024 bytes.
 # [PULP] 20203101ns - WRITE32 burst @1c005c00 for        1024 bytes.
-# [PULP] 20591601ns - WRITE32 burst @1c006000 for         472 bytes.
-# [PULP] 21421701ns - WRITE32 burst @1c008000 for        1024 bytes.
-# [PULP] 22251801ns - WRITE32 burst @1c008400 for        1024 bytes.
-# [PULP] 23081901ns - WRITE32 burst @1c008800 for        1024 bytes.
-# [PULP] 23912001ns - WRITE32 burst @1c008c00 for        1024 bytes.
-# [PULP] 24742101ns - WRITE32 burst @1c009000 for        1024 bytes.
-# [PULP] 25572201ns - WRITE32 burst @1c009400 for        1024 bytes.
-# [PULP] 26402301ns - WRITE32 burst @1c009800 for        1024 bytes.
-# [PULP] 27104401ns - WRITE32 burst @1c009c00 for         864 bytes.
-# [TB  ] 27106001ns - Resuming the CORE
-# [TB  ] 27164801ns - retrying debug reg access
-# [TB  ] 27194101ns - retrying debug reg access
-# [TB  ] 27223401ns - retrying debug reg access
-# [TB  ] 27252701ns - retrying debug reg access
-# [TB  ] 27282001ns - retrying debug reg access
-# [TB  ] 27311301ns - retrying debug reg access
-# [TB  ] 27340601ns - retrying debug reg access
-# [TB  ] 27369901ns - retrying debug reg access
-# [TB  ] 27399201ns - retrying debug reg access
-# [TB  ] 27428501ns - retrying debug reg access
-# [TB  ] 27457801ns - retrying debug reg access
-# [TB  ] 27487101ns - retrying debug reg access
-# [TB  ] 27516401ns - retrying debug reg access
-# [TB  ] 27545701ns - retrying debug reg access
-# [TB  ] 27575001ns - retrying debug reg access
-# [TB  ] 27604301ns - retrying debug reg access
-# [TB  ] 27633601ns - retrying debug reg access
-# [TB  ] 27662901ns - retrying debug reg access
-# [TB  ] 27692201ns - retrying debug reg access
-# [TB  ] 27721501ns - retrying debug reg access
-# [TB  ] 27750801ns - retrying debug reg access
-# [TB  ] 27780101ns - retrying debug reg access
-# [TB  ] 27809401ns - retrying debug reg access
-# [TB  ] 27838701ns - retrying debug reg access
-# [TB  ] 27868001ns - retrying debug reg access
+# [PULP] 20655601ns - WRITE32 burst @1c006000 for         552 bytes.
+# [PULP] 21485701ns - WRITE32 burst @1c008000 for        1024 bytes.
+# [PULP] 22315801ns - WRITE32 burst @1c008400 for        1024 bytes.
+# [PULP] 23145901ns - WRITE32 burst @1c008800 for        1024 bytes.
+# [PULP] 23976001ns - WRITE32 burst @1c008c00 for        1024 bytes.
+# [PULP] 24806101ns - WRITE32 burst @1c009000 for        1024 bytes.
+# [PULP] 25636201ns - WRITE32 burst @1c009400 for        1024 bytes.
+# [PULP] 26466301ns - WRITE32 burst @1c009800 for        1024 bytes.
+# [PULP] 27296401ns - WRITE32 burst @1c009c00 for        1024 bytes.
+# [PULP] 27364901ns - WRITE32 burst @1c00a000 for          72 bytes.
+# [TB  ] 27366501ns - Resuming the CORE
+# [TB  ] 27410601ns - retrying debug reg access
+# [TB  ] 27439901ns - retrying debug reg access
+# [TB  ] 27469201ns - retrying debug reg access
+# [TB  ] 27498501ns - retrying debug reg access
+# [TB  ] 27527801ns - retrying debug reg access
+# [TB  ] 27557101ns - retrying debug reg access
+# [TB  ] 27586401ns - retrying debug reg access
+# [TB  ] 27615701ns - retrying debug reg access
+# [TB  ] 27645001ns - retrying debug reg access
+# [TB  ] 27674301ns - retrying debug reg access
+# [TB  ] 27703601ns - retrying debug reg access
+# [TB  ] 27732901ns - retrying debug reg access
+# [TB  ] 27762201ns - retrying debug reg access
+# [TB  ] 27791501ns - retrying debug reg access
+# [TB  ] 27820801ns - retrying debug reg access
+# [TB  ] 27850101ns - retrying debug reg access
+# [TB  ] 27879401ns - retrying debug reg access
+# [TB  ] 27908701ns - retrying debug reg access
+# [TB  ] 27938001ns - retrying debug reg access
+# [TB  ] 27967301ns - retrying debug reg access
+# [TB  ] 27996601ns - retrying debug reg access
+# [TB  ] 28025901ns - retrying debug reg access
+# [TB  ] 28055201ns - retrying debug reg access
+# [TB  ] 28084501ns - retrying debug reg access
+# [TB  ] 28113801ns - retrying debug reg access
 # [STDOUT-CL31_PE0] NTT starts!
 # [STDOUT-CL31_PE0] Getnoise executed!
-# [TB  ] 28426701ns - Waiting for end of computation
+# [TB  ] 28687201ns - Waiting for end of computation
+# [STDOUT-CL31_PE0] INPUT [0]
 # [STDOUT-CL31_PE0] 0000fffe-00000002-fffefffe-0001ffff-0001ffff-00000002-00000000-0001ffff-00010000-00010002-ffff0000-0001fffe-ffff0000-fffe0001-ffff0001-00000000-ffff0000-00000000-00010000-fffffffe-00000002-00000001-ffff0001-00000001-0000fffe-00000000-0000ffff-00000000-fffeffff-0000ffff-fffe0001-00000000-ffffffff-00000000-00000000-fffe0000-00000000-fffeffff-fffe0000-00000002-00000001-00000000-00010001-ffff0001-00000000-00000000-ffffffff-0001ffff-0000fffe-ffff0001-00000002-00020001-ffffffff-00000000-00000001-ffff0000-00000000-0001ffff-ffff0000-00020000-0000ffff-00000000-00010000-0001ffff-00000000-ffff0000-00000001-ffff0002-00000001-00000001-00020000-0000ffff-0000ffff-00000001-0000ffff-00000001-ffff0000-00000000-00020000-00000001-00000000-00000000-ffff0001-0001ffff-ffff0000-0000fffe-00000001-0000ffff-00000002-00010001-fffe0001-0001ffff-00000001-0000ffff-fffe0000-0000ffff-00000001-0001ffff-ffff0001-00000001-00000000-00000002-00010000-00000000-ffffffff-fffeffff-00020000-00010002-00010000-ffff0000-0000ffff-ffff0001-ffffffff-ffffffff-ffffffff-0000ffff-0000ffff-ffffffff-fffe0000-00000001-00020000-00000001-00000001-ffffffff-0001ffff-00010000-0001fffe-00020000-
 # [STDOUT-CL31_PE0] NTT accelerator starts working!
-# [STDOUT-CL31_PE0] fa0c04af-fe0b0073-04da0026-fbf4fb5d-0469f9c7-fbd2fc25-02f800db-003801de-02c0fd71-007700c1-0191fd4a-fc39031b-005602d6-05d20439-02c80000-01800530-fa49febb-00fd02d3-0210fcc3-fbb7fbb9-04810370-fab202fb-fb8a04a4-fdc4fa47-fd97fe59-020c0238-02dff986-04c5051f-003403ba-053b002b-fd2afe78-fbbbfbf5-fd970321-01affcd9-fcbc04ce-0509039b-fd3ffc9f-f9f70515-fc3d03d5-fd90040f-fc6a0619-03d0037f-05870430-ff9ef9f5-fd1df9a1-0363fa96-05a2fe84-fde8036b-fc9afc7e-fd0cff1e-fdad060b-0277027f-0434ff31-03f4010c-0442fb1a-fbc5fbf8-feb603e9-055204cd-fa7bff77-05aef9b5-01590554-ff8a04be-fa93fcb5-042d0450-ff6f047d-0420fae8-fccffbdd-fc71ff9e-fb3505a7-0280008d-005e048b-04aefd6e-031dfb04-fedc0428-fb0bfbb8-05f40364-05aff9f3-fd31040f-01c2faf6-0172fd10-f9e8fec1-ff3b03fa-f9b500b0-02f9fbc7-fd34047a-fcd4ffa0-0127f9a9-066c01f3-028afd64-033cffa7-0270fea6-025f0291-001302c6-017efeb8-fcebfa0e-00ba0040-fb03fc29-0639fa2c-054d0607-03b401d3-fcddfbf9-019305be-00a9033f-032bfa11-fa550200-01d9fd88-ff2bfcab-00e5fe62-fd300103-faa0fe46-fe1bffb9-03f40265-fdef001f-0047fbd0-fba904c8-053a0530-fed3fa16-f989fd2e-fe5dfbdf-04aefd62-fe10fca3-fb590634-fa6efbdd-fceafdf5-01780514-0236ff9a-faa1fea5-fe440030-
+# [STDOUT-CL31_PE0] fa0c04af-fe0b0073-04da0026-fbf4fb5d-0469f9c7-fbd2fc25-02f800db-003801de-02c0fd71-007700c1-0191fd4a-fc39031b-005602d6-05d20439-02c80000-01800530-fa49febb-00fd02d3-0210fcc3-fbb7fbb9-04810370-fab202fb-fb8a04a4-fdc4fa47-fd97fe59-020c0238-02dff986-04c5051f-003403ba-053b002b-fd2afe78-fbbbfbf5-fd970321-01affcd9-fcbc04ce-0509039b-fd3ffc9f-f9f70515-fc3d03d5-fd90040f-fc6a0619-03d0037f-05870430-ff9ef9f5-fd1df9a1-0363fa96-05a2fe84-fde8036b-fc9afc7e-fd0cff1e-fdad060b-0277027f-0434ff31-03f4010c-0442fb1a-fbc5fbf8-feb603e9-055204cd-fa7bff77-05aef9b5-01590554-ff8a04be-fa93fcb5-042d0450-ff6f047d-0420fae8-fccffbdd-fc71ff9e-fb3505a7-0280008d-005e048b-04aefd6e-031dfb04-fedc0428-fb0bfbb8-05f40364-05aff9f3-fd31040f-01c2faf6-0172fd10-f9e8fec1-ff3b03fa-f9b500b0-02f9fbc7-fd34047a-fcd4ffa0-0127f9a9-066c01f3-028afd64-033cffa7-0270fea6-025f0291-001302c6-017efeb8-fcebfa0e-00ba0040-fb03fc29-0639fa2c-054d0607-03b401d3-fcddfbf9-019305be-00a9033f-032bfa11-fa550200-01d9fd88-ff2bfcab-00e5fe62-fd300103-faa0fe46-fe1bffb9-03f40265-fdef001f-0047fbd0-fba904c8-053a0530-fed3fa16-f989fd2e-fe5dfbdf-04aefd62-fe10fca3-fb590634-fa6efbdd-fceafdf5-01780514-0236ff9a-faa1fcbe-01a902cd-
 # [STDOUT-CL31_PE0] NTT accelerator ends working!
-# [STDOUT-CL31_PE0] fa0c04af-fe0b0073-04da0026-fbf4fb5d-0469f9c7-fbd2fc25-02f800db-003801de-02c0fd71-007700c1-0191fd4a-fc39031b-005602d6-05d20439-02c80000-01800530-fa49febb-00fd02d3-0210fcc3-fbb7fbb9-04810370-fab202fb-fb8a04a4-fdc4fa47-fd97fe59-020c0238-02dff986-04c5051f-003403ba-053b002b-fd2afe78-fbbbfbf5-fd970321-01affcd9-fcbc04ce-0509039b-fd3ffc9f-f9f70515-fc3d03d5-fd90040f-fc6a0619-03d0037f-05870430-ff9ef9f5-fd1df9a1-0363fa96-05a2fe84-fde8036b-fc9afc7e-fd0cff1e-fdad060b-0277027f-0434ff31-03f4010c-0442fb1a-fbc5fbf8-feb603e9-055204cd-fa7bff77-05aef9b5-01590554-ff8a04be-fa93fcb5-042d0450-ff6f047d-0420fae8-fccffbdd-fc71ff9e-fb3505a7-0280008d-005e048b-04aefd6e-031dfb04-fedc0428-fb0bfbb8-05f40364-05aff9f3-fd31040f-01c2faf6-0172fd10-f9e8fec1-ff3b03fa-f9b500b0-02f9fbc7-fd34047a-fcd4ffa0-0127f9a9-066c01f3-028afd64-033cffa7-0270fea6-025f0291-001302c6-017efeb8-fcebfa0e-00ba0040-fb03fc29-0639fa2c-054d0607-03b401d3-fcddfbf9-019305be-00a9033f-032bfa11-fa550200-01d9fd88-ff2bfcab-00e5fe62-fd300103-faa0fe46-fe1bffb9-03f40265-fdef001f-0047fbd0-fba904c8-053a0530-fed3fa16-f989fd2e-fe5dfbdf-04aefd62-fe10fca3-fb590634-fa6efbdd-fceafdf5-01780514-0236ff9a-faa1fea5-fe440030-NTT done!
-# [TB  ] 34181701ns - Received status core: 0x00000000
+# [STDOUT-CL31_PE0] OUTPUT [0]
+# [STDOUT-CL31_PE0] fa0c04af-fe0b0073-04da0026-fbf4fb5d-0469f9c7-fbd2fc25-02f800db-003801de-02c0fd71-007700c1-0191fd4a-fc39031b-005602d6-05d20439-02c80000-01800530-fa49febb-00fd02d3-0210fcc3-fbb7fbb9-04810370-fab202fb-fb8a04a4-fdc4fa47-fd97fe59-020c0238-02dff986-04c5051f-003403ba-053b002b-fd2afe78-fbbbfbf5-fd970321-01affcd9-fcbc04ce-0509039b-fd3ffc9f-f9f70515-fc3d03d5-fd90040f-fc6a0619-03d0037f-05870430-ff9ef9f5-fd1df9a1-0363fa96-05a2fe84-fde8036b-fc9afc7e-fd0cff1e-fdad060b-0277027f-0434ff31-03f4010c-0442fb1a-fbc5fbf8-feb603e9-055204cd-fa7bff77-05aef9b5-01590554-ff8a04be-fa93fcb5-042d0450-ff6f047d-0420fae8-fccffbdd-fc71ff9e-fb3505a7-0280008d-005e048b-04aefd6e-031dfb04-fedc0428-fb0bfbb8-05f40364-05aff9f3-fd31040f-01c2faf6-0172fd10-f9e8fec1-ff3b03fa-f9b500b0-02f9fbc7-fd34047a-fcd4ffa0-0127f9a9-066c01f3-028afd64-033cffa7-0270fea6-025f0291-001302c6-017efeb8-fcebfa0e-00ba0040-fb03fc29-0639fa2c-054d0607-03b401d3-fcddfbf9-019305be-00a9033f-032bfa11-fa550200-01d9fd88-ff2bfcab-00e5fe62-fd300103-faa0fe46-fe1bffb9-03f40265-fdef001f-0047fbd0-fba904c8-053a0530-fed3fa16-f989fd2e-fe5dfbdf-04aefd62-fe10fca3-fb590634-fa6efbdd-fceafdf5-01780514-0236ff9a-faa1fcbe-01a902cd-INPUT [1]
+# [STDOUT-CL31_PE0] 0002ffff-00000000-ffff0002-00000000-fffffffe-ffff0000-ffff0000-fffe0000-fffeffff-00000000-0000fffe-00010000-00010000-00000000-ffff0000-00010000-00010000-00010000-00000001-00010000-0000ffff-ffff0000-00010000-00020000-0000ffff-ffff0001-00010001-ffff0000-ffff0002-00020000-00010001-00010000-00000000-0001ffff-fffffffe-00000001-ffff0001-ffff0000-00000000-00000000-00010001-0001ffff-ffff0000-00000001-0001ffff-fffe0001-00020000-00010000-0000ffff-00010001-ffffffff-00010001-ffff0001-00010001-0000fffe-0000ffff-ffff0000-00000000-00000000-ffff0002-ffff0000-00000000-00010000-00000000-ffffffff-fffe0000-00000000-ffff0001-00000000-00000000-ffff0001-00010001-0002ffff-ffff0000-00010000-ffff0002-00010000-0000fffe-00010000-00010000-0001ffff-00000001-00000000-00000000-0000ffff-00010001-0001fffe-00000001-00020000-0000ffff-00010002-ffffffff-00000000-00010002-0000fffe-00000001-ffff0000-00010002-00000000-00010000-00000001-0000ffff-00000001-00000000-fffffffe-00000000-ffff0000-fffe0001-00000002-00010000-0000fffe-00010000-ffffffff-00010000-00000000-ffff0000-00000000-0000ffff-fffffffe-00010001-ffff0000-0001ffff-00010001-0000ffff-ffff0001-00000000-ffff0000-00000000-
+# [STDOUT-CL31_PE0] NTT accelerator starts working!
+# [STDOUT-CL31_PE0] 0071fd01-06250248-00f60068-030d04d6-00eafb6a-01f2023b-03ecfa85-0033ff63-064b0325-00f9fa61-f996ff0c-0626fe66-0002062a-05670353-f9c1fd74-ffba04a2-0090036c-fd210435-fde6feb6-041400ba-02f3f9e0-057a0538-00e1fc1f-03fdfd44-01a103f4-02e0ffe6-05c7fc3b-f983fc3d-f9daf9c9-fb86ff52-053e03e5-04c205ee-05390604-0016f9f1-0009fb69-fd4e0378-fd3b0576-0075ff77-f99d01f4-025700cb-fbf10083-058bffd1-0347fed8-ffceff65-fd7d0258-0511fdf4-0148ffd0-fdf205fb-0121fae7-fe17fc77-fe6f0077-04c00413-fc66fc3d-ffaef99e-022f0411-05ddfba6-fc5affba-fccffa4c-fa050551-0647fbf0-fdde056b-048afbde-033804a4-018bfd60-02910121-00b801b0-fc94fe65-02890035-035fffe5-f99300b2-00e1fd5f-fffc05a9-ff22fb9d-0244fd7e-fa5a016d-0583fa3f-fa62018c-fc800127-fef20214-0175fb72-f9fb01d5-feba046d-fb5b01ab-fde2011e-fe4803bb-fa0a0644-fa2d03af-038700a3-0528fd3f-fd82fa81-05aa0614-03c001fb-05be00a6-fc11fa0f-fa27ffe1-02230226-00e0fe47-fa2904a3-fbfdfb03-faac0310-fa690073-fc2a0655-038e0375-fca00181-fd180646-03c90310-feae00a6-0148fe47-fdeffb72-fa59fddc-019c034b-fb2bfeda-fb3e0556-0510fd7d-fdbdfb16-fac30299-f9c900a6-0400f9c6-fbf0fd3d-030303f7-fb9afc6e-fec8faad-fb98fbe2-fdea058a-ff280622-0224fefb-0655ffc9-fc6e03cd-
+# [STDOUT-CL31_PE0] NTT accelerator ends working!
+# [STDOUT-CL31_PE0] OUTPUT [1]
+# [STDOUT-CL31_PE0] 0071fd01-06250248-00f60068-030d04d6-00eafb6a-01f2023b-03ecfa85-0033ff63-064b0325-00f9fa61-f996ff0c-0626fe66-0002062a-05670353-f9c1fd74-ffba04a2-0090036c-fd210435-fde6feb6-041400ba-02f3f9e0-057a0538-00e1fc1f-03fdfd44-01a103f4-02e0ffe6-05c7fc3b-f983fc3d-f9daf9c9-fb86ff52-053e03e5-04c205ee-05390604-0016f9f1-0009fb69-fd4e0378-fd3b0576-0075ff77-f99d01f4-025700cb-fbf10083-058bffd1-0347fed8-ffceff65-fd7d0258-0511fdf4-0148ffd0-fdf205fb-0121fae7-fe17fc77-fe6f0077-04c00413-fc66fc3d-ffaef99e-022f0411-05ddfba6-fc5affba-fccffa4c-fa050551-0647fbf0-fdde056b-048afbde-033804a4-018bfd60-02910121-00b801b0-fc94fe65-02890035-035fffe5-f99300b2-00e1fd5f-fffc05a9-ff22fb9d-0244fd7e-fa5a016d-0583fa3f-fa62018c-fc800127-fef20214-0175fb72-f9fb01d5-feba046d-fb5b01ab-fde2011e-fe4803bb-fa0a0644-fa2d03af-038700a3-0528fd3f-fd82fa81-05aa0614-03c001fb-05be00a6-fc11fa0f-fa27ffe1-02230226-00e0fe47-fa2904a3-fbfdfb03-faac0310-fa690073-fc2a0655-038e0375-fca00181-fd180646-03c90310-feae00a6-0148fe47-fdeffb72-fa59fddc-019c034b-fb2bfeda-fb3e0556-0510fd7d-fdbdfb16-fac30299-f9c900a6-0400f9c6-fbf0fd3d-030303f7-fb9afc6e-fec8faad-fb98fbe2-fdea058a-ff280622-0224fefb-0655ffc9-fc6e03cd-INPUT [2]
+# [STDOUT-CL31_PE0] ffff0001-0002ffff-ffff0001-0001ffff-ffff0001-00000000-00010000-00010000-ffffffff-00020001-ffff0002-fffe0000-ffff0000-0001ffff-ffff0000-ffff0001-0001ffff-00000000-00000000-00010001-0001ffff-ffff0000-0000ffff-00000000-0000fffe-00010001-00000000-00020001-fffffffe-fffffffe-ffff0000-00000000-ffff0000-ffff0001-00000001-00020000-00010000-0002ffff-00000002-00010001-00000002-fffe0000-ffff0001-0000ffff-00000000-00000002-00000001-00000001-ffff0001-ffff0000-00000000-ffff0002-00000000-ffff0000-00010000-fffffffe-0000ffff-fffe0000-fffe0000-ffff0002-ffffffff-00010000-00010000-00000001-ffff0000-ffffffff-00000001-ffff0000-00010000-00000000-00000001-fffffffe-0000ffff-0001fffe-0001ffff-ffff0000-0000ffff-00000000-00000001-00010000-fffe0001-00020001-0001fffe-00000001-ffffffff-fffeffff-00000000-00010000-00020002-00010000-00000002-00020000-00020000-00000001-0002fffe-ffff0001-0000ffff-00000000-00000001-00000000-00020000-ffff0001-00000000-0001ffff-0001ffff-ffff0000-ffff0000-ffffffff-00010001-0002ffff-00020000-0000fffe-0000ffff-0000ffff-00010001-0000ffff-00000001-ffffffff-00010000-00010001-0000ffff-ffff0001-00010000-0001ffff-00010000-fffeffff-0000ffff-ffff0000-
+# [STDOUT-CL31_PE0] NTT accelerator starts working!
+# [STDOUT-CL31_PE0] fce6fda6-0369ffdb-05ab05c0-fe6f0145-05310050-05bafa94-fb0aff2b-fa26fa19-00bcfb0c-041c0615-059303dc-00a605e3-04b7fea1-03190312-ff29fd23-fed3fa28-ff4efbc5-fcc8fbf4-045103af-fedffc17-fda4036b-ff72f9f8-fd4d011a-fd57027f-fce3fc95-fa680249-feb90489-04e3fd6c-023cfc35-fb94037e-0153fddb-fee9f9cc-fcea00b3-0198fdc2-022afc9e-0648066b-00ebfe7b-ffa6fd18-060bf990-01bcfdc0-fe67036a-fbe304cf-fb63fab6-03f0ff8e-fb82fd62-0303fd2d-fd420424-007afe7d-ff2d00e9-faa70027-fcf4021c-fbd8033e-fefbfa37-0052f98e-05d40047-04b8fd27-00350456-00db0560-fe660488-0459fa35-fe130172-fed20103-032aff02-fa53faee-01c7fc6c-fe9b0168-034301e8-02c2fd91-04fb00c8-fe1dfe30-0510feed-fc230664-f9ff008d-fad104ab-fbecffbe-fd47ff57-01fafc12-fa6a0102-00110499-037001c9-035dfcb0-fdaa04d4-fe89f9be-018605f4-fde00331-ff750662-fc3602a4-fa9f03d1-02eefd1e-fa7cfd9d-fb56fb40-00abfca9-00d402f5-034afddd-02a60495-05c9fc34-fdd90318-0379fd5c-03a30472-0408fe8f-04f7fe5d-ff45fa03-fb810658-fd6f012e-fb0d015c-ff09fd43-f99bfeec-feee0536-03910399-fbc00562-02f1fecc-00b1ff84-016affcb-fafffde2-ff65feca-ffea0297-fbb302d3-049effe9-fbddfa38-0425fa20-027805ff-046d007b-01ec01e7-014d0267-f9b40154-028803c7-020ff986-034afd0d-
+# [STDOUT-CL31_PE0] NTT accelerator ends working!
+# [STDOUT-CL31_PE0] OUTPUT [2]
+# [STDOUT-CL31_PE0] fce6fda6-0369ffdb-05ab05c0-fe6f0145-05310050-05bafa94-fb0aff2b-fa26fa19-00bcfb0c-041c0615-059303dc-00a605e3-04b7fea1-03190312-ff29fd23-fed3fa28-ff4efbc5-fcc8fbf4-045103af-fedffc17-fda4036b-ff72f9f8-fd4d011a-fd57027f-fce3fc95-fa680249-feb90489-04e3fd6c-023cfc35-fb94037e-0153fddb-fee9f9cc-fcea00b3-0198fdc2-022afc9e-0648066b-00ebfe7b-ffa6fd18-060bf990-01bcfdc0-fe67036a-fbe304cf-fb63fab6-03f0ff8e-fb82fd62-0303fd2d-fd420424-007afe7d-ff2d00e9-faa70027-fcf4021c-fbd8033e-fefbfa37-0052f98e-05d40047-04b8fd27-00350456-00db0560-fe660488-0459fa35-fe130172-fed20103-032aff02-fa53faee-01c7fc6c-fe9b0168-034301e8-02c2fd91-04fb00c8-fe1dfe30-0510feed-fc230664-f9ff008d-fad104ab-fbecffbe-fd47ff57-01fafc12-fa6a0102-00110499-037001c9-035dfcb0-fdaa04d4-fe89f9be-018605f4-fde00331-ff750662-fc3602a4-fa9f03d1-02eefd1e-fa7cfd9d-fb56fb40-00abfca9-00d402f5-034afddd-02a60495-05c9fc34-fdd90318-0379fd5c-03a30472-0408fe8f-04f7fe5d-ff45fa03-fb810658-fd6f012e-fb0d015c-ff09fd43-f99bfeec-feee0536-03910399-fbc00562-02f1fecc-00b1ff84-016affcb-fafffde2-ff65feca-ffea0297-fbb302d3-049effe9-fbddfa38-0425fa20-027805ff-046d007b-01ec01e7-014d0267-f9b40154-028803c7-020ff986-034afd0d-FINAL OUTPUT in polyvec
+# [STDOUT-CL31_PE0] SKPV-result [0]
+# [STDOUT-CL31_PE0] FA0C-04AF-FE0B-0073-04DA-0026-FBF4-FB5D-0469-F9C7-FBD2-FC25-02F8-00DB-0038-01DE-02C0-FD71-0077-00C1-0191-FD4A-FC39-031B-0056-02D6-05D2-0439-02C8-0000-0180-0530-FA49-FEBB-00FD-02D3-0210-FCC3-FBB7-FBB9-0481-0370-FAB2-02FB-FB8A-04A4-FDC4-FA47-FD97-FE59-020C-0238-02DF-F986-04C5-051F-0034-03BA-053B-002B-FD2A-FE78-FBBB-FBF5-FD97-0321-01AF-FCD9-FCBC-04CE-0509-039B-FD3F-FC9F-F9F7-0515-FC3D-03D5-FD90-040F-FC6A-0619-03D0-037F-0587-0430-FF9E-F9F5-FD1D-F9A1-0363-FA96-05A2-FE84-FDE8-036B-FC9A-FC7E-FD0C-FF1E-FDAD-060B-0277-027F-0434-FF31-03F4-010C-0442-FB1A-FBC5-FBF8-FEB6-03E9-0552-04CD-FA7B-FF77-05AE-F9B5-0159-0554-FF8A-04BE-FA93-FCB5-042D-0450-FF6F-047D-0420-FAE8-FCCF-FBDD-FC71-FF9E-FB35-05A7-0280-008D-005E-048B-04AE-FD6E-031D-FB04-FEDC-0428-FB0B-FBB8-05F4-0364-05AF-F9F3-FD31-040F-01C2-FAF6-0172-FD10-F9E8-FEC1-FF3B-03FA-F9B5-00B0-02F9-FBC7-FD34-047A-FCD4-FFA0-0127-F9A9-066C-01F3-028A-FD64-033C-FFA7-0270-FEA6-025F-0291-0013-02C6-017E-FEB8-FCEB-FA0E-00BA-0040-FB03-FC29-0639-FA2C-054D-0607-03B4-01D3-FCDD-FBF9-0193-05BE-00A9-033F-032B-FA11-FA55-0200-01D9-FD88-FF2B-FCAB-00E5-FE62-FD30-0103-FAA0-FE46-FE1B-FFB9-03F4-0265-FDEF-001F-0047-FBD0-FBA9-04C8-053A-0530-FED3-FA16-F989-FD2E-FE5D-FBDF-04AE-FD62-FE10-FCA3-FB59-0634-FA6E-FBDD-FCEA-FDF5-0178-0514-0236-FF9A-FAA1-FCBE-01A9-02CD-SKPV-result [1]
+# [STDOUT-CL31_PE0] 0071-FD01-0625-0248-00F6-0068-030D-04D6-00EA-FB6A-01F2-023B-03EC-FA85-0033-FF63-064B-0325-00F9-FA61-F996-FF0C-0626-FE66-0002-062A-0567-0353-F9C1-FD74-FFBA-04A2-0090-036C-FD21-0435-FDE6-FEB6-0414-00BA-02F3-F9E0-057A-0538-00E1-FC1F-03FD-FD44-01A1-03F4-02E0-FFE6-05C7-FC3B-F983-FC3D-F9DA-F9C9-FB86-FF52-053E-03E5-04C2-05EE-0539-0604-0016-F9F1-0009-FB69-FD4E-0378-FD3B-0576-0075-FF77-F99D-01F4-0257-00CB-FBF1-0083-058B-FFD1-0347-FED8-FFCE-FF65-FD7D-0258-0511-FDF4-0148-FFD0-FDF2-05FB-0121-FAE7-FE17-FC77-FE6F-0077-04C0-0413-FC66-FC3D-FFAE-F99E-022F-0411-05DD-FBA6-FC5A-FFBA-FCCF-FA4C-FA05-0551-0647-FBF0-FDDE-056B-048A-FBDE-0338-04A4-018B-FD60-0291-0121-00B8-01B0-FC94-FE65-0289-0035-035F-FFE5-F993-00B2-00E1-FD5F-FFFC-05A9-FF22-FB9D-0244-FD7E-FA5A-016D-0583-FA3F-FA62-018C-FC80-0127-FEF2-0214-0175-FB72-F9FB-01D5-FEBA-046D-FB5B-01AB-FDE2-011E-FE48-03BB-FA0A-0644-FA2D-03AF-0387-00A3-0528-FD3F-FD82-FA81-05AA-0614-03C0-01FB-05BE-00A6-FC11-FA0F-FA27-FFE1-0223-0226-00E0-FE47-FA29-04A3-FBFD-FB03-FAAC-0310-FA69-0073-FC2A-0655-038E-0375-FCA0-0181-FD18-0646-03C9-0310-FEAE-00A6-0148-FE47-FDEF-FB72-FA59-FDDC-019C-034B-FB2B-FEDA-FB3E-0556-0510-FD7D-FDBD-FB16-FAC3-0299-F9C9-00A6-0400-F9C6-FBF0-FD3D-0303-03F7-FB9A-FC6E-FEC8-FAAD-FB98-FBE2-FDEA-058A-FF28-0622-0224-FEFB-0655-FFC9-FC6E-03CD-SKPV-result [2]
+# [STDOUT-CL31_PE0] FCE6-FDA6-0369-FFDB-05AB-05C0-FE6F-0145-0531-0050-05BA-FA94-FB0A-FF2B-FA26-FA19-00BC-FB0C-041C-0615-0593-03DC-00A6-05E3-04B7-FEA1-0319-0312-FF29-FD23-FED3-FA28-FF4E-FBC5-FCC8-FBF4-0451-03AF-FEDF-FC17-FDA4-036B-FF72-F9F8-FD4D-011A-FD57-027F-FCE3-FC95-FA68-0249-FEB9-0489-04E3-FD6C-023C-FC35-FB94-037E-0153-FDDB-FEE9-F9CC-FCEA-00B3-0198-FDC2-022A-FC9E-0648-066B-00EB-FE7B-FFA6-FD18-060B-F990-01BC-FDC0-FE67-036A-FBE3-04CF-FB63-FAB6-03F0-FF8E-FB82-FD62-0303-FD2D-FD42-0424-007A-FE7D-FF2D-00E9-FAA7-0027-FCF4-021C-FBD8-033E-FEFB-FA37-0052-F98E-05D4-0047-04B8-FD27-0035-0456-00DB-0560-FE66-0488-0459-FA35-FE13-0172-FED2-0103-032A-FF02-FA53-FAEE-01C7-FC6C-FE9B-0168-0343-01E8-02C2-FD91-04FB-00C8-FE1D-FE30-0510-FEED-FC23-0664-F9FF-008D-FAD1-04AB-FBEC-FFBE-FD47-FF57-01FA-FC12-FA6A-0102-0011-0499-0370-01C9-035D-FCB0-FDAA-04D4-FE89-F9BE-0186-05F4-FDE0-0331-FF75-0662-FC36-02A4-FA9F-03D1-02EE-FD1E-FA7C-FD9D-FB56-FB40-00AB-FCA9-00D4-02F5-034A-FDDD-02A6-0495-05C9-FC34-FDD9-0318-0379-FD5C-03A3-0472-0408-FE8F-04F7-FE5D-FF45-FA03-FB81-0658-FD6F-012E-FB0D-015C-FF09-FD43-F99B-FEEC-FEEE-0536-0391-0399-FBC0-0562-02F1-FECC-00B1-FF84-016A-FFCB-FAFF-FDE2-FF65-FECA-FFEA-0297-FBB3-02D3-049E-FFE9-FBDD-FA38-0425-FA20-0278-05FF-046D-007B-01EC-01E7-014D-0267-F9B4-0154-0288-03C7-020F-F986-034A-FD0D-NTT done!
+# [TB  ] 56356501ns - Received status core: 0x00000000
 # ** Note: $stop    : /home/alessandra.dolmeta/pqc_riscv/pulpissimo/rtl/tb/tb_pulp.sv(776)
-#    Time: 34181701 ns  Iteration: 0  Instance: /tb_pulp
+#    Time: 56356501 ns  Iteration: 0  Instance: /tb_pulp
 # Break in Module tb_pulp at /home/alessandra.dolmeta/pqc_riscv/pulpissimo/rtl/tb/tb_pulp.sv line 776
-# End time: 14:16:31 on Jun 09,2023, Elapsed time: 0:12:38
+# Stopped at /home/alessandra.dolmeta/pqc_riscv/pulpissimo/rtl/tb/tb_pulp.sv line 776
+# End time: 17:10:20 on Jun 09,2023, Elapsed time: 0:05:48
 # Errors: 0, Warnings: 10

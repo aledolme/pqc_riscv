@@ -71,28 +71,9 @@ static int16_t fqmul(int16_t a, int16_t b) {
 
 /*************************************************
 * Name:        PQCLEAN_KYBER768_CLEAN_ntt
-*
-* Description: Inplace number-theoretic transform (NTT) in Rq.
-*              input is in standard order, output is in bitreversed order
-*
-* Arguments:   - int16_t r[256]: pointer to input/output vector of elements of Zq
+*              This function has been removed, since it now perfomed by NTT_INTT_PWM accelerator.
 **************************************************/
-void PQCLEAN_KYBER768_CLEAN_ntt(int16_t r[256]) {
-    unsigned int len, start, j, k;
-    int16_t t, zeta;
 
-    k = 1;
-    for (len = 128; len >= 2; len >>= 1) {
-        for (start = 0; start < 256; start = j + len) {
-            zeta = PQCLEAN_KYBER768_CLEAN_zetas[k++];
-            for (j = start; j < start + len; j++) {
-                t = fqmul(zeta, r[j + len]);
-                r[j + len] = r[j] - t;
-                r[j] = r[j] + t;
-            }
-        }
-    }
-}
 
 /*************************************************
 * Name:        invntt_tomont
