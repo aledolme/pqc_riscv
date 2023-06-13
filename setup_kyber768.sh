@@ -33,5 +33,5 @@ make clean build
 cd ../test/kyber768/$folder
 make clean all
 make dis > kyber768_$folder.s
-make -f Makefile run gui=1
-#make -f Makefile run
+#make -f Makefile run gui=1
+make -f Makefile run
