@@ -1208,17 +1208,17 @@ int main(void) {
 	pk[1182] = 0x6c;
 	pk[1183] = 0x8d;
 	
-	printf("pk:\n");
-	printbytes(pk, PQCLEAN_KYBER768_CLEAN_CRYPTO_PUBLICKEYBYTES);
+	//printf("pk:\n");
+	//printbytes(pk, PQCLEAN_KYBER768_CLEAN_CRYPTO_PUBLICKEYBYTES);
 
-    // Encapsulation
-    PQCLEAN_KYBER768_CLEAN_crypto_kem_enc(sendb, key_b, pk);
-    printf("Encapsulation done!\n");
+  // Encapsulation
+  PQCLEAN_KYBER768_CLEAN_crypto_kem_enc(sendb, key_b, pk);
+  printf("Encapsulation done!\n");
 
 	printf("sendb:\n");
 	printbytes(sendb, PQCLEAN_KYBER768_CLEAN_CRYPTO_CIPHERTEXTBYTES);
 	printf("key_b:\n");
-    printbytes(key_b, PQCLEAN_KYBER768_CLEAN_CRYPTO_BYTES);
+  printbytes(key_b, PQCLEAN_KYBER768_CLEAN_CRYPTO_BYTES);
 	    
 
     return 0;
