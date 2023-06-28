@@ -52,23 +52,24 @@
  /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/ntt_intt_pwm/ntt_intt_pwm_auto.h \
  /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/ntt_intt_pwm/ntt_intt_pwm_driver.h \
  /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/ntt_intt_pwm/intt_driver.h \
- /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/api.h \
- /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/cbd.h \
- /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/params.h \
- /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/poly.h \
- /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/fips202.h \
- /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/indcpa.h \
- /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/polyvec.h \
- /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/kem.h \
- /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/ntt.h \
- /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/params.h \
- /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/poly.h \
- /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/polyvec.h \
- /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/randombytes.h \
- /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/reduce.h \
- /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/symmetric.h \
- /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/fips202.h \
- /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/verify.h \
+ /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/ntt_intt_pwm/pwm_driver.h \
+ /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/api.h \
+ /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/cbd.h \
+ /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/params.h \
+ /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/poly.h \
+ /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/fips202.h \
+ /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/indcpa.h \
+ /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/polyvec.h \
+ /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/kem.h \
+ /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/ntt.h \
+ /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/params.h \
+ /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/poly.h \
+ /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/polyvec.h \
+ /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/randombytes.h \
+ /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/reduce.h \
+ /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/symmetric.h \
+ /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/fips202.h \
+ /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/verify.h \
  /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/implem/implem.h \
  /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/implem/alloc.h \
  /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/implem/irq.h \
@@ -183,39 +184,41 @@
 
 /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/ntt_intt_pwm/intt_driver.h:
 
-/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/api.h:
+/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/ntt_intt_pwm/pwm_driver.h:
 
-/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/cbd.h:
+/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/api.h:
 
-/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/params.h:
+/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/cbd.h:
 
-/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/poly.h:
+/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/params.h:
 
-/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/fips202.h:
+/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/poly.h:
 
-/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/indcpa.h:
+/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/fips202.h:
 
-/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/polyvec.h:
+/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/indcpa.h:
 
-/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/kem.h:
+/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/polyvec.h:
 
-/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/ntt.h:
+/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/kem.h:
 
-/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/params.h:
+/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/ntt.h:
 
-/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/poly.h:
+/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/params.h:
 
-/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/polyvec.h:
+/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/poly.h:
 
-/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/randombytes.h:
+/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/polyvec.h:
 
-/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/reduce.h:
+/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/randombytes.h:
 
-/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/symmetric.h:
+/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/reduce.h:
 
-/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/fips202.h:
+/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/symmetric.h:
 
-/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber512/verify.h:
+/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/fips202.h:
+
+/home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/kyber768/verify.h:
 
 /home/alessandra.dolmeta/pqc_riscv/pulp-runtime/include/implem/implem.h:
 
